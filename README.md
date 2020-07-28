@@ -15,7 +15,6 @@ I am passionate about solving interesting and complex software problems and buil
 A little more about me:
 
 * Working on a health-care data platform at early-stage start-up company, [Lucerna Health](https://lucernahealth.com)
-* Current tech stack includes Python, Spark, Pandas, SQL, Redshift, Spectrum, Athena, DBT, Phalcon, React, Lambda, Glue, Step Functions, ECS, Docker
 * Currently learning Spark and AWS Glue
 * Interested in learning Rust and doing more with Go and Elixir
 
