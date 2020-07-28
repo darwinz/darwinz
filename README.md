@@ -42,11 +42,9 @@ https://johnsonbrandon.com
 
 ## connect 
 
-[![Linkedin](https://lh3.googleusercontent.com/proxy/y9YIS1O1-e7sGP7sMFYtIgr0icJADtXs9lNDoOZN6E1nNdi4pboeKBzTceukgLB3D3dEoz9mXRKRGcJjSUi4wWSahnCYPVkeIs7yFQn3IJCSHMD2avTPPZ7QxrK9YGOmPnk)](https://linkedin.com/in/brandonbjohnson)
+<img src="https://lh3.googleusercontent.com/proxy/y9YIS1O1-e7sGP7sMFYtIgr0icJADtXs9lNDoOZN6E1nNdi4pboeKBzTceukgLB3D3dEoz9mXRKRGcJjSUi4wWSahnCYPVkeIs7yFQn3IJCSHMD2avTPPZ7QxrK9YGOmPnk" alt="LinkedIn" width="150" height="150">
+<img src="https://cdn3.iconfinder.com/data/icons/logos-and-brands-adobe/512/160_Hackerrank-512.png" alt="HackerRank" width="150" height="150">
+<img src="https://toppng.com/uploads/preview/format-twitter-logo-transparent-11549680770lolovrdq8m.png" alt="Twitter" width="150" height="150">
 
-[![HackerRank](https://cdn3.iconfinder.com/data/icons/logos-and-brands-adobe/512/160_Hackerrank-512.png)](https://www.hackerrank.com/bbj1979)
-
-[![Twitter](https://toppng.com/uploads/preview/format-twitter-logo-transparent-11549680770lolovrdq8m.png)](https://www.twitter.com/ubbjuntu)
-
-<img align="center" src="https://github-readme-stats.anuraghazra1.vercel.app/api?username=darwinz&show_icons=true&include_all_commits=true&theme=radical" alt="Brandon's github stats" />
+<p align="center"><img align="center" src="https://github-readme-stats.anuraghazra1.vercel.app/api?username=darwinz&show_icons=true&include_all_commits=true&theme=radical" alt="Brandon's github stats" /></p>
 
