@@ -30,8 +30,8 @@ A little more about me:
 <tr><th scope='row'>Alma mater</th><td>University of Utah</td></tr>
 <tr><th scope='row'>Occupation</th><td>Senior Software Engineer</td></tr>
 <tr><th scope='row'>Organization</th><td>Lucerna Health</td></tr>
-<tr><th scope='row'>Current Stack</th><td>Python, Spark, Pandas, PostgreSQL, Redshift, Spectrum, Athena, S3, Parquet, DBT, Phalcon, React, Lambda, Glue, Step Functions, ECS, Docker</td></tr>
-<tr><th scope='row'>Other Skills</th><td>Ruby, Rails, JavaScript, Node.js, Java, Elixir, Go, PHP, AWS, Kubernetes, Shell</td></tr>
+<tr><th scope='row'>Current Stack</th><td>Python, Spark, Pandas, PostgreSQL, Redshift, Spectrum, Athena, S3, Parquet, DBT, Falcon, React, Lambda, Glue, Step Functions, ECS, SNS, SQS, Cloudwatch, Docker, Secrets Manager, Okta</td></tr>
+<tr><th scope='row'>Other Skills</th><td>Ruby, Rails, JavaScript, Node.js, Java, Elixir, Go, PHP, AWS (VPC, IAM, EC2, EKS, RDS, DynamoDB, CloudFormation, SNS, SQS, Cloudwatch, CloudFront, Elasticsearch Service), MySQL, Aurora, Mongo, Elasticsearch, Neo4J, Kubernetes, Terraform, Shell</td></tr>
 </tbody>
 </table>
 
