@@ -37,7 +37,7 @@ A little more about me:
 
 ## my website
 
-https://johnsonbrandon.com
+<a href="https://johnsonbrandon.com" target="_blank">https://johnsonbrandon.com</a>
 
 ## connect 
 
