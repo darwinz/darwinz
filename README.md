@@ -41,7 +41,7 @@ A little more about me:
 
 ## connect 
 
-<p><a href="https://linkedin.com/in/brandonbjohnson" target="_blank"><img src="https://lh3.googleusercontent.com/proxy/y9YIS1O1-e7sGP7sMFYtIgr0icJADtXs9lNDoOZN6E1nNdi4pboeKBzTceukgLB3D3dEoz9mXRKRGcJjSUi4wWSahnCYPVkeIs7yFQn3IJCSHMD2avTPPZ7QxrK9YGOmPnk" alt="LinkedIn" width="50" height="50"></a><a href="https://hackerrank.com/bbj1979" target="_blank"><img src="https://cdn3.iconfinder.com/data/icons/logos-and-brands-adobe/512/160_Hackerrank-512.png" alt="HackerRank" width="50" height="50"></a><a href="https://twitter.com/ubbjuntu" target="_blank"><img src="https://toppng.com/uploads/preview/format-twitter-logo-transparent-11549680770lolovrdq8m.png" alt="Twitter" width="50" height="50"></a></p>
+<p><a href="https://linkedin.com/in/brandonbjohnson" target="_blank"><img src="https://cdn.worldvectorlogo.com/logos/linkedin-icon-2.svg" alt="LinkedIn" width="50" height="50"></a><a href="https://hackerrank.com/bbj1979" target="_blank"><img src="https://cdn3.iconfinder.com/data/icons/logos-and-brands-adobe/512/160_Hackerrank-512.png" alt="HackerRank" width="50" height="50"></a><a href="https://twitter.com/ubbjuntu" target="_blank"><img src="https://toppng.com/uploads/preview/format-twitter-logo-transparent-11549680770lolovrdq8m.png" alt="Twitter" width="50" height="50"></a></p>
 
 <p align="center"><img align="center" src="https://github-readme-stats.anuraghazra1.vercel.app/api?username=darwinz&show_icons=true&include_all_commits=true&count_private=true&theme=radical" alt="Stats - Public GitHub Repos" /></p>
 
