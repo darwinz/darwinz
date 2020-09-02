@@ -22,7 +22,7 @@ Hello World, I'm Brandon Johnson (darwinz) 👋
 <br/>
 
 <ul>
-<li>Working on a health-care data platform at early-stage start-up company, [Lucerna Health](https://lucernahealth.com)</li>
+<li>Working on a health-care data platform at early-stage start-up company, <a href="https://lucernahealth.com">Lucerna Health</a></li>
 <li>Currently learning Spark and AWS Glue</li>
 <li>Interested in learning Rust and doing more with Go and Elixir</li>
 </ul>
