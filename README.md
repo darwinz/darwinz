@@ -1,11 +1,9 @@
 <!-- top left -->
-<a href="#" click="alert()">
-    <img src="https://media1.giphy.com/media/L0C3eo0XgklO7iqXRC/source.gif" width="60" height="60"/> 
+<a href="#">
+    <img src="https://media1.giphy.com/media/L0C3eo0XgklO7iqXRC/source.gif" width="100" height="60"/> 
 </a>
 
 Hello World, I'm Brandon Johnson (darwinz) 👋
-
----
 
 <table>
 <thead>
@@ -24,16 +22,16 @@ Hello World, I'm Brandon Johnson (darwinz) 👋
 </tbody>
 </table>
 
----
-
-<!-- GitHub stats -- >
-<p align="center"><img align="center" src="https://github-readme-stats.anuraghazra1.vercel.app/api?username=darwinz&show_icons=true&include_all_commits=true&count_private=true&theme=tokyonight" alt="Stats - Public GitHub Repos" /></p>
+<!-- GitHub stats -->
+<p align="center">
+  <img src="https://github-readme-stats.vercel.app/api?username=darwinz&show_icons=true&theme=tokyonight" alt="GitHub Stats" width="420"/>
+</p>
 
 ---
 
 <!-- vercel github profile trophy -->
 <p align="center">
-    <img src="https://github-profile-trophy.vercel.app/?username=arshiamidos&column=7&theme=onedark"/>
+    <img src="https://github-profile-trophy.vercel.app/?username=darwinz&column=7&theme=onedark"/>
 </p>
 
 ---
@@ -41,8 +39,6 @@ Hello World, I'm Brandon Johnson (darwinz) 👋
 <details>
 <summary> More about me </summary>
 <br/>
-
----
 
 <ul>
 <li>Working on a health-care data platform at early-stage start-up company, <a href="https://lucernahealth.com">Lucerna Health</a></li>
@@ -56,15 +52,11 @@ Hello World, I'm Brandon Johnson (darwinz) 👋
 
 ---
 
-<p><a href="https://linkedin.com/in/brandonbjohnson" target="_blank"><img src="https://cdn.worldvectorlogo.com/logos/linkedin-icon-2.svg" alt="LinkedIn" width="50" height="50"></a><a href="https://hackerrank.com/bbj1979" target="_blank"><img src="https://cdn3.iconfinder.com/data/icons/logos-and-brands-adobe/512/160_Hackerrank-512.png" alt="HackerRank" width="50" height="50"></a><a href="https://twitter.com/ubbjuntu" target="_blank"><img src="https://f0.pngfuel.com/png/872/50/twitter-logo-computer-icons-social-media-logo-twitter-social-media-png-clip-art-thumbnail.png" alt="Twitter" width="50" height="50"></a></p>
+<p><a href="https://linkedin.com/in/brandonbjohnson" target="_blank"><img src="https://cdn.worldvectorlogo.com/logos/linkedin-icon-2.svg" alt="LinkedIn" width="50" height="50"></a>&nbsp;&nbsp;<a href="https://hackerrank.com/bbj1979" target="_blank"><img src="https://info.hackerrank.com/rs/487-WAY-049/images/Podcast-ChannelCover-Final.jpg" alt="HackerRank" width="50" height="50"></a>&nbsp;&nbsp;<a href="https://twitter.com/ubbjuntu" target="_blank"><img src="https://www.iconfinder.com/data/icons/capsocial-square-flat-3/500/twitter2-512.png" alt="Twitter" width="50" height="50"></a></p>
 
 ---
 
 <!-- spotify -->
-<p align="center">
-    <img src="https://spotify-github-profile.vercel.app/api/view?uid=27nmzpwwd5wwhxvirwxb7cnk0&cover_image=true"/>
-</p>
+[![spotify-github-profile](https://spotify-github-profile.vercel.app/api/view?uid=121686652&cover_image=true)](https://github.com/darwinz)
 </details>
-
----
 
