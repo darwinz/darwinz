@@ -29,13 +29,6 @@ Hello World, I'm Brandon Johnson (darwinz) 👋
 
 ---
 
-<!-- GitHub top langs -->
-<p align="center">
-  <img align="center" src="https://github-readme-stats.vercel.app/api/top-langs/?username=darwinz&hide=html,css&langs_count=8" alt="GitHub Top Langs" width="420"/>
-</p>
-
----
-
 <!-- vercel github profile trophy -->
 <p align="center">
     <img src="https://github-profile-trophy.vercel.app/?username=darwinz&column=5&theme=onedark&title=Commit,PullRequest,Repositories,Followers,Stars"/>
