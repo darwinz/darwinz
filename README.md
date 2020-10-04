@@ -41,9 +41,9 @@ Hello World, I'm Brandon Johnson (darwinz) 👋
 <br/>
 
 <ul>
-<li>Working on a health-care data platform at early-stage start-up company, <a href="https://lucernahealth.com">Lucerna Health</a></li>
-<li>Currently learning Spark and AWS Glue</li>
-<li>Interested in learning Rust and doing more with Go and Elixir</li>
+<li>Working at financial tech company, <a href="https://moov.io">Moov Financial</a>, a de facto financial services platform enabling payments and core banking services</li>
+<li>Working heavily in Golang, along with Docker, Kubernetes, and Google Cloud</li>
+<li>Interested in learning Rust and doing more with Elixir</li>
 </ul>
 
 ---
