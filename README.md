@@ -17,7 +17,7 @@ Hello World, I'm Brandon Johnson (darwinz) 👋
 <tr><th scope='row'>Alma mater</th><td>University of Utah</td></tr>
 <tr><th scope='row'>Occupation</th><td>Senior Software Engineer</td></tr>
 <tr><th scope='row'>Organization</th><td>Moov Financial</td></tr>
-<tr><th scope='row'>Current Stack</th><td>Go, MySQL, SQLite, JavaScript, Ruby, Google Cloud Platform, Docker, Kubernetes, Terraform, GitHub</td></tr>
+<tr><th scope='row'>Current Stack</th><td>Go, MySQL, SQLite, JavaScript, Google Cloud Platform, Docker, Kubernetes, Terraform, GitHub</td></tr>
 <tr><th scope='row'>Other Skills</th><td>Python, Ruby on Rails, JavaScript, Node.js, Go, Java, Elixir, PHP, AWS, serverless, MySQL, PostgreSQL, Aurora, Mongo, Elasticsearch, Neo4J, Kubernetes, Terraform, CloudFormation, Shell, React</td></tr>
 </tbody>
 </table>
