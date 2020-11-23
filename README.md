@@ -31,7 +31,7 @@ Hello World, I'm Brandon Johnson (darwinz) 👋
 
 <!-- vercel github profile trophy -->
 <p align="center">
-    <img src="https://github-profile-trophy.vercel.app/?username=darwinz&column=5&theme=onedark&title=Commit,PullRequest,Repositories,Followers,Stars,Issues"/>
+    <img src="https://github-profile-trophy.vercel.app/?username=darwinz&column=6&theme=onedark&title=Commit,PullRequest,Repositories,Followers,Stars,Issues"/>
 </p>
 
 ---
