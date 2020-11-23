@@ -18,7 +18,7 @@ Hello World, I'm Brandon Johnson (darwinz) 👋
 <tr><th scope='row'>Occupation</th><td>Senior Software Engineer</td></tr>
 <tr><th scope='row'>Organization</th><td>Moov Financial</td></tr>
 <tr><th scope='row'>Current Stack</th><td>Go, MySQL, SQLite, JavaScript, Google Cloud Platform, Docker, Kubernetes, Terraform, GitHub</td></tr>
-<tr><th scope='row'>Other Skills</th><td>Python, Ruby on Rails, JavaScript, Node.js, Go, Java, Elixir, PHP, AWS, serverless, MySQL, PostgreSQL, Aurora, Mongo, Elasticsearch, Neo4J, Kubernetes, Terraform, CloudFormation, Shell, React</td></tr>
+<tr><th scope='row'>Other Experience</th><td>Python, Ruby on Rails, JavaScript, Node.js, React, Angular, TypeScript, Go, Java, Elixir, PHP, AWS, serverless, MySQL, PostgreSQL, Aurora, Mongo, Elasticsearch, Neo4J, Kubernetes, Terraform, CloudFormation, Shell</td></tr>
 </tbody>
 </table>
 
@@ -31,7 +31,7 @@ Hello World, I'm Brandon Johnson (darwinz) 👋
 
 <!-- vercel github profile trophy -->
 <p align="center">
-    <img src="https://github-profile-trophy.vercel.app/?username=darwinz&column=5&theme=onedark&title=Commit,PullRequest,Repositories,Followers,Stars"/>
+    <img src="https://github-profile-trophy.vercel.app/?username=darwinz&column=5&theme=onedark&title=Commit,PullRequest,Repositories,Followers,Stars,Issues"/>
 </p>
 
 ---
@@ -42,7 +42,7 @@ Hello World, I'm Brandon Johnson (darwinz) 👋
 
 <ul>
 <li>Working at financial tech company, <a href="https://moov.io">Moov Financial</a>, a de facto financial services platform enabling payments and core banking services</li>
-<li>Working heavily in Golang, along with Docker, Kubernetes, and Google Cloud</li>
+<li>Working heavily in Golang, Docker, Kubernetes, and Google Cloud</li>
 <li>Interested in learning Rust and doing more with Elixir</li>
 </ul>
 
