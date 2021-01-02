@@ -16,7 +16,7 @@ Hello World, I'm Brandon Johnson (darwinz) 👋
     <tr><th scope='row'>Role</th><td>Senior Software Engineer</td></tr>
     <tr><th scope='row'>Organization</th><td>Moov Financial</td></tr>
     <tr><th scope='row'>Current Stack</th><td>Go, MySQL, SQLite, REST, Microservices, Kafka, JavaScript, Node, React, Google Cloud Platform, Traefik, Docker, Kubernetes, Terraform, GitHub, Prometheus, Grafana, Loki</td></tr>
-    <tr><th scope='row'>Other Experience</th><td>Python, Ruby on Rails, JavaScript, Node.js, React, Angular, TypeScript, Go, Java, Elixir, PHP, AWS, serverless, MySQL, PostgreSQL, Aurora, Mongo, Elasticsearch, Neo4J, Kubernetes, Terraform, CloudFormation, Shell</td></tr>
+    <tr><th scope='row'>Other Experience</th><td>Python, Ruby on Rails, Go, JavaScript, Node.js, Java, Elixir, PHP, React, Angular, TypeScript, AWS, serverless, MySQL, PostgreSQL, Aurora, Mongo, Elasticsearch, Neo4J, Kubernetes, Terraform, CloudFormation, Shell</td></tr>
   </tbody>
 </table>
 
