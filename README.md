@@ -29,9 +29,10 @@ Hello World, I'm Brandon Johnson (darwinz) 👋
     </tr>
   </thead>
   <tbody>
-    <tr><th scope='row'>Moov-io/irs</th><td><a href="https://github.com/moov-io/irs" target="_blank">Moov-io / irs</a></td></tr>
-    <tr><th scope='row'>Moov-io/1120x</th><td><a href="https://github.com/moov-io/1120x" target="_blank">Moov-io / 1120x</a></td></tr>
-    <tr><th scope='row'>TheAlgorithms/PHP</th><td><a href="https://github.com/thealgorithms/php" target="_blank">TheAlgorithms / PHP</a></td></tr>
+    <tr><td><a href="https://github.com/moov-io/irs" target="_blank">Moov-io / irs</a></td><td>IRS implemented a reader, writer, and HTTP server for IRS electronic Filing Information Returns Electronically (FIRE).
+    Our tools and library operate at higher levels (JSON) which makes it easier for developers to leverage over the raw bytes (ASCII).</td></tr>
+    <tr><td><a href="https://github.com/moov-io/1120x" target="_blank">Moov-io / 1120x</a></td><td>1120x is a subset of moov.io IRS project. It'll support Modernized e-File payload production for the 1120 family forms for tax year 2020 and beyond.</td></tr>
+    <tr><td><a href="https://github.com/thealgorithms/php" target="_blank">TheAlgorithms / PHP</a></td><td>The Algorithms projects attempt to help software engineers to know and understand the algorithms available in various software programming languages.</td></tr>
   </tbody>
 </table>
 
