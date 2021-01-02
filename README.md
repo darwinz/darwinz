@@ -13,18 +13,33 @@ Hello World, I'm Brandon Johnson (darwinz) 👋
 </thead>
 <tbody>
 <tr><th scope='row'>Name</th><td>Brandon Johnson</td></tr>
-<tr><th scope='row'>Education</th><td>Bachelor of Science</td></tr>
-<tr><th scope='row'>Alma mater</th><td>University of Utah</td></tr>
-<tr><th scope='row'>Occupation</th><td>Senior Software Engineer</td></tr>
+<tr><th scope='row'>Role</th><td>Senior Software Engineer</td></tr>
 <tr><th scope='row'>Organization</th><td>Moov Financial</td></tr>
 <tr><th scope='row'>Current Stack</th><td>Go, MySQL, SQLite, REST, Microservices, Kafka, JavaScript, Node, React, Google Cloud Platform, Traefik, Docker, Kubernetes, Terraform, GitHub, Prometheus, Grafana, Loki</td></tr>
 <tr><th scope='row'>Other Experience</th><td>Python, Ruby on Rails, JavaScript, Node.js, React, Angular, TypeScript, Go, Java, Elixir, PHP, AWS, serverless, MySQL, PostgreSQL, Aurora, Mongo, Elasticsearch, Neo4J, Kubernetes, Terraform, CloudFormation, Shell</td></tr>
 </tbody>
 </table>
 
+---
+
+<table>
+<thead>
+<tr>
+<th colspan="2">Official Maintainer for the Following Repositories</th>
+</tr>
+</thead>
+<tbody>
+<tr><th scope='row'>Moov-io/irs</th><td>[moov-io/irs](github.com/moov-io/irs)</td></tr>
+<tr><th scope='row'>Moov-io/1120x</th><td>[moov-io/1120x](github.com/moov-io/1120x)</td></tr>
+<tr><th scope='row'>TheAlgorithms/PHP</th><td>[thealgorithms/php](github.com/thealgorithms/php)</td></tr>
+</tbody>
+</table>
+
+---
+
 <!-- GitHub stats -->
 <p align="center">
-  <img align="center" src="https://github-readme-stats.vercel.app/api?username=darwinz&show_icons=true&count_private=true&hide=issues&theme=tokyonight" alt="GitHub Stats" width="420"/>
+  <img align="center" src="https://github-readme-stats.vercel.app/api?username=darwinz&show_icons=true&count_private=true&hide=none&theme=tokyonight" alt="GitHub Stats" width="420"/>
 </p>
 
 ---
