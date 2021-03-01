@@ -14,15 +14,15 @@ Hello World, I'm Brandon Johnson (darwinz) 👋
   <tbody>
     <tr><th scope='row'>Name</th><td>Brandon Johnson</td></tr>
     <tr><th scope='row'>Role</th><td>Senior Software Engineer</td></tr>
-    <tr><th scope='row'>Organization</th><td>Moov Financial</td></tr>
-    <tr><th scope='row'>Current Stack</th><td>Go, MySQL, SQLite, REST, Microservices, Kafka, JavaScript, Node, React, Google Cloud Platform, Traefik, Docker, Kubernetes, Terraform, GitHub, Prometheus, Grafana, Loki</td></tr>
-    <tr><th scope='row'>Other Experience</th><td>Python, Ruby on Rails, Go, JavaScript, Node.js, Java, Elixir, PHP, React, Angular, TypeScript, AWS, serverless, MySQL, PostgreSQL, Aurora, Mongo, Elasticsearch, Neo4J, Kubernetes, Terraform, CloudFormation, Shell</td></tr>
+    <tr><th scope='row'>Organization</th><td>Moov Financial, Moov-io</td></tr>
+    <tr><th scope='row'>Current Stack</th><td>Go, MySQL, OpenAPI, REST, Microservices, Kafka, JavaScript, Node, React, Ruby, Google Cloud Platform, Traefik, Docker, Kubernetes, Terraform, Packer, GitHub, Prometheus, Grafana, Loki</td></tr>
+    <tr><th scope='row'>Other Experience</th><td>Python, Ruby on Rails, Go, Elixir, JavaScript, Node, Java, PHP, React, Angular, TypeScript, AWS, serverless, MySQL, PostgreSQL, Aurora, Mongo, Cassandra, Elasticsearch, Neo4J, Kubernetes, Terraform, CloudFormation, Shell</td></tr>
   </tbody>
 </table>
 
 ---
 
-<table style="margin-left: auto; margin-right: auto;">
+<!--<table style="margin-left: auto; margin-right: auto;">
   <thead>
     <tr>
       <th colspan="2">Official Maintainer for the Following Public Repositories</th>
@@ -34,7 +34,7 @@ Hello World, I'm Brandon Johnson (darwinz) 👋
     <tr><td><a href="https://github.com/moov-io/1120x" target="_blank">Moov-io / 1120x</a></td><td>1120x is a subset of moov.io IRS project. It'll support Modernized e-File payload production for the 1120 family forms for tax year 2020 and beyond.</td></tr>
     <tr><td><a href="https://github.com/thealgorithms/php" target="_blank">TheAlgorithms / PHP</a></td><td>The Algorithms projects attempt to help software engineers to know and understand the algorithms available in various software programming languages.</td></tr>
   </tbody>
-</table>
+</table>-->
 
 ---
 
