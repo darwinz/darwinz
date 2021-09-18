@@ -5,18 +5,20 @@
 
 Hello World, I'm Brandon Johnson (darwinz) 👋
 
+I am a senior software engineer for <a href="https://moov.io">Moov Financial, Inc.</a>, which is built around a community of developers in the Financial Technology (Fintech) space.  Moov provides a number of popular open source repositories, and I've had the opportunity to contribute to a number of them.
+
 <table>
-  <thead>
+<!--  <thead>
     <tr>
       <th colspan="2">Quick Info</th>
     </tr>
-  </thead>
+  </thead>-->
   <tbody>
     <tr><th scope='row'>Name</th><td>Brandon Johnson</td></tr>
-    <tr><th scope='row'>Role</th><td>Senior Software Engineer</td></tr>
+    <tr><th scope='row'>Role</th><td>Senior Software Engineer - Moov Financial, Inc.</td></tr>
     <tr><th scope='row'>Organization</th><td>Moov Financial, Moov-io</td></tr>
-    <tr><th scope='row'>Current Stack</th><td>Go, MySQL, OpenAPI, REST, Microservices, Kafka, JavaScript, Node, React, Ruby, Google Cloud Platform, Traefik, Docker, Kubernetes, Terraform, Packer, GitHub, Prometheus, Grafana, Loki</td></tr>
-    <tr><th scope='row'>Other Experience</th><td>Python, Ruby on Rails, Go, Elixir, JavaScript, Node, Java, PHP, React, Angular, TypeScript, MySQL, PostgreSQL, Aurora, Mongo, Cassandra, Elasticsearch, Neo4J, DynamoDB, Redis, Memcached, Kafka, Pulsar, AWS, serverless, Google Cloud, Kubernetes, Terraform, CloudFormation, Shell</td></tr>
+    <tr><th scope='row'>Current Stack</th><td>Go, MySQL, OpenAPI, Kafka, Vault, Kubernetes, Docker, Terraform, Packer, TypeScript, Node, React, Google Cloud Platform, Traefik, GitHub, GitHub Actions, Prometheus, Loki, Linux, Shell</td></tr>
+    <tr><th scope='row'>Other Experience</th><td>Python, Ruby, Elixir, Java, PHP, JavaScript, HCL, Objective-C, Lua, Painless, PostgreSQL, Redshift, Aurora, Mongo, Cassandra, Elasticsearch, Neo4J, DynamoDB, Redis, Memcached, RabbitMQ, Pulsar, Rails, Django, Flask, Spark, Spring Boot, Guice, Express, Vue, Angular, Magento, Zend, WordPress, Protobuf, gRPC, REST, GraphQL, most things in AWS, CloudFormation, CodeDeploy, CodeBuild, Drone, Jenkins, CircleCI, Capistrano, HTML5, CSS3, Webpack, Grunt, Gulp, Bower, Npm, Yarn, Hugo, Netlify, Testify, Unittest, Rspec, Espec, JUnit, Mocha, Jest, PHPUnit</td></tr>
   </tbody>
 </table>
 
@@ -36,11 +38,10 @@ Hello World, I'm Brandon Johnson (darwinz) 👋
   </tbody>
 </table>-->
 
----
-
   <!-- GitHub stats -->
 <p align="center">
-  <img align="center" src="https://github-readme-stats.vercel.app/api?username=darwinz&show_icons=true&count_private=true&hide=none&theme=tokyonight" alt="GitHub Stats" width="420"/>
+  <img width=48%" src="https://github-readme-stats.vercel.app/api?username=darwinz&show_icons=true&count_private=true&hide=none&theme=tokyonight" alt="GitHub Stats"/>
+  <img width="48%" src="https://github-readme-streak-stats.herokuapp.com/?user=darwinz&theme=tokyonight"/>
 </p>
 
 ---
@@ -52,27 +53,32 @@ Hello World, I'm Brandon Johnson (darwinz) 👋
 
 ---
 
+<!-- platane/snk gif generated to 'output' branch -->
+![darwinz snake gif](https://github.com/darwinz/darwinz/blob/output/github-contribution-grid-snake.svg)
+
+---
+
 <details>
-  <summary> More about me </summary>
+  <summary> A little more about me </summary>
   <br/>
 
+  <p> Some fun facts </p>
   <ul>
-    <li>Working at financial tech company, <a href="https://moov.io">Moov Financial</a>, a de facto financial services platform enabling payments and core banking services</li>
-    <li>Working heavily in Golang, Docker, Kubernetes, and Google Cloud</li>
-    <li>Interested in learning Rust and doing more with Elixir</li>
+    <li>I've founded/co-founded a few companies in the past, including a SAAS platform for real estate developers, an app allowing athletes to compare performance with pro athletes, and a dev consulting agency</li>
+    <li>My favorite programming language has been Python, followed by Go which has quickly moved to #2 on my list (and may surpass Python soon), followed by Ruby, then JavaScript (Node), and then Elixir</li>
+    <li>I'm also interested in learning Rust and doing more with Elixir</li>
   </ul>
 
 ---
 
+  ### Find me around the web:
+
   <p><a href="https://johnsonbrandon.com" target="_blank">johnsonbrandon.com</a></p>
 
----
 
-  <p><a href="https://linkedin.com/in/brandonbjohnson" target="_blank"><img src="https://cdn.worldvectorlogo.com/logos/linkedin-icon-2.svg" alt="LinkedIn" width="50" height="50"></a>&nbsp;&nbsp;<a href="https://hackerrank.com/bbj1979" target="_blank"><img src="https://info.hackerrank.com/rs/487-WAY-049/images/Podcast-ChannelCover-Final.jpg" alt="HackerRank" width="50" height="50"></a>&nbsp;&nbsp;<a href="https://twitter.com/ubbjuntu" target="_blank"><img src="https://www.iconfinder.com/data/icons/capsocial-square-flat-3/500/twitter2-512.png" alt="Twitter" width="50" height="50"></a></p>
-
----
+  <p><a href="https://linkedin.com/in/brandonbjohnson" target="_blank"><img src="https://cdn.worldvectorlogo.com/logos/linkedin-icon-2.svg" alt="LinkedIn" width="50" height="50"></a>&nbsp;&nbsp;<a href="https://hackerrank.com/bbj1979" target="_blank"><img src="https://info.hackerrank.com/rs/487-WAY-049/images/Podcast-ChannelCover-Final.jpg" alt="HackerRank" width="50" height="50"></a>&nbsp;&nbsp;<a href="https://twitter.com/ubbjuntu" target="_blank"><img src="https://lh3.googleusercontent.com/proxy/ccN0shTnjkinKwCsFOi29h7nyCunGNF43CRBKW22aNVxQWlGqy4NWiQI_oilLalw-kYdOsLKJeRnhbu1jdTtI5F7vDTQWT_qg56MWDQE_cZ_fhIBUTA" alt="Twitter" width="50" height="50"></a><a href="https://www.quora.com/profile/Brandon-Johnson-5" target="_blank"><img src="https://static.wikia.nocookie.net/logopedia/images/8/83/Quora-512.png/revision/latest?cb=20200420105000" alt="Quora" width="50" height="50" /></a><a href="https://medium.com/@brandonjohnson_43523" target="_blank"><img src="https://cdn.iconscout.com/icon/free/png-256/medium-47-433328.png" alt="Medium" width="50" height="50" /></a></p>
 
   <!-- spotify -->
-  [![spotify-github-profile](https://spotify-github-profile.vercel.app/api/view?uid=121686652&cover_image=true)](https://github.com/darwinz)
+<!--  [![spotify-github-profile](https://spotify-github-profile.vercel.app/api/view?uid=121686652&cover_image=true)](https://github.com/darwinz) -->
 </details>
 
