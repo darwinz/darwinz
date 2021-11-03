@@ -65,7 +65,7 @@ I am a senior software engineer for <a href="https://moov.io">Moov Financial, In
   <ul>
     <li>I've founded/co-founded a few companies in the past, including a SAAS platform for real estate developers, an app allowing athletes to compare performance with pro athletes, and a dev consulting agency</li>
     <li>My favorite programming language has been Python, followed by Go which has quickly moved to #2 on my list (and may surpass Python soon), followed by Ruby, then JavaScript (Node), and then Elixir</li>
-    <li>I'm also interested in learning Rust and doing more with Elixir</li>
+    <li>I'm also interested in learning Rust</li>
   </ul>
 
 ---
