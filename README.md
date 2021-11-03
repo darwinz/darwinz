@@ -14,11 +14,10 @@ I am a senior software engineer for <a href="https://moov.io">Moov Financial, In
     </tr>
   </thead>-->
   <tbody>
-    <tr><th scope='row'>Name</th><td>Brandon Johnson</td></tr>
     <tr><th scope='row'>Role</th><td>Senior Software Engineer - Moov Financial, Inc.</td></tr>
     <tr><th scope='row'>Organization</th><td>Moov Financial, Moov-io</td></tr>
-    <tr><th scope='row'>Current Stack</th><td>Go, MySQL, OpenAPI, Kafka, Vault, Kubernetes, Docker, Terraform, Packer, TypeScript, Node, React, Google Cloud Platform, Traefik, GitHub, GitHub Actions, Prometheus, Loki, Linux, Shell</td></tr>
-    <tr><th scope='row'>Other Experience</th><td>Python, Ruby, Elixir, Java, PHP, JavaScript, HCL, Objective-C, Lua, Painless, PostgreSQL, Redshift, Aurora, Mongo, Cassandra, Elasticsearch, Neo4J, DynamoDB, Redis, Memcached, RabbitMQ, Pulsar, Rails, Django, Flask, Spark, Spring Boot, Guice, Express, Vue, Angular, Magento, Zend, WordPress, Protobuf, gRPC, REST, GraphQL, most things in AWS, CloudFormation, CodeDeploy, CodeBuild, Drone, Jenkins, CircleCI, Capistrano, HTML5, CSS3, Webpack, Grunt, Gulp, Bower, Npm, Yarn, Hugo, Netlify, Testify, Unittest, Rspec, Espec, JUnit, Mocha, Jest, PHPUnit</td></tr>
+    <tr><th scope='row'>Current Stack</th><td>Go, MySQL, OpenAPI, Kafka, Vault, Kubernetes, Docker, Terraform, Packer, Consul, TypeScript, Node, React, Google Cloud Platform, Traefik, GitHub, GitHub Actions, Prometheus, Loki, Linux, Shell</td></tr>
+    <tr><th scope='row'>Other Areas I Contribute</th><td>Python, Ruby, Elixir, Java, PHP, JavaScript, HCL, Objective-C, Lua, Painless, PostgreSQL, Redshift, Aurora, Mongo, Cassandra, Elasticsearch, Neo4J, DynamoDB, Redis, Memcached, RabbitMQ, Pulsar, Rails, Django, Flask, Spark, Flink, Spring Boot, Guice, Express, Vue, Angular, Magento, Zend, Protobuf, gRPC, REST, GraphQL, AWS</td></tr>
   </tbody>
 </table>
 
