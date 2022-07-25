@@ -47,7 +47,7 @@ I am a senior software engineer for <a href="https://moov.io">Moov Financial, In
 
   <!-- vercel github profile trophy -->
 <p align="center">
-  <img src="https://github-profile-trophy.vercel.app/?username=darwinz&column=6&theme=onedark&title=Commit,PullRequest,Repositories,Followers,Stars,Issues"/>
+  <img src="https://github-profile-trophy.vercel.app/?username=darwinz&column=7&margin-w=8&theme=darkhub&title=MultipleLang,Commit,PullRequest,Repositories,Followers,Stars,Issues"/>
 </p>
 
 ---
