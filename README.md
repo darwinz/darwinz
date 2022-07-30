@@ -56,7 +56,7 @@ I am a senior software engineer for <a href="https://moov.io">Moov Financial, In
 
 <table>
 <tr>
-<td align="center"><a href="https://dev.to/darwinz" title="AppWrite Hackathon on Dev - Participant Badge"><img src="https://res.cloudinary.com/practicaldev/image/fetch/s--7J0lDU97--/c_limit,f_auto,fl_progressive,q_80,w_375/https://dev-to-uploads.s3.amazonaws.com/uploads/badge/badge_image/166/appwrite-participant-adge.png" width="70px"></a></td>
+<td align="center"><a href="https://dev.to/darwinz" title="AppWrite Hackathon"><img src="https://res.cloudinary.com/practicaldev/image/fetch/s--7J0lDU97--/c_limit,f_auto,fl_progressive,q_80,w_375/https://dev-to-uploads.s3.amazonaws.com/uploads/badge/badge_image/166/appwrite-participant-adge.png" width="70px"></a></td>
 <td align="center"><a href="https://dev.to/darwinz" title="Hacktoberfest 2021"><img src="https://res.cloudinary.com/practicaldev/image/fetch/s--cm4PWdMq--/c_limit,f_auto,fl_progressive,q_80,w_375/https://dev-to-uploads.s3.amazonaws.com/uploads/badge/badge_image/131/hacktoberfest-2021-badge.png" width="80px"></a></td>
 <td align="center"><a href="https://dev.to/darwinz" title="One Year Club"><img src="https://res.cloudinary.com/practicaldev/image/fetch/s--4f5VWKQw--/c_limit,f_auto,fl_progressive,q_80,w_375/https://dev-to-uploads.s3.amazonaws.com/uploads/badge/badge_image/2/1-year-badge.png" width="80px"></a></td>
 <td align="center"><a href="https://dev.to/darwinz" title="Hacktoberfest 2020"><img src="https://res.cloudinary.com/practicaldev/image/fetch/s--ipK3ZYfm--/c_limit,f_auto,fl_progressive,q_80,w_375/https://dev-to-uploads.s3.amazonaws.com/uploads/badge/badge_image/80/hacktoberfest2020-badge_2.png" width="80px"></a></td>
