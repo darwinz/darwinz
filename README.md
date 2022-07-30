@@ -17,7 +17,7 @@ I am a senior software engineer for <a href="https://moov.io">Moov Financial, In
     <tr><th scope='row'>Role</th><td>Senior Software Engineer - Moov Financial, Inc.</td></tr>
     <tr><th scope='row'>Organization</th><td>Moov Financial, Moov-io</td></tr>
     <tr><th scope='row'>Current Stack</th><td>Go, MySQL, OpenAPI, REST APIs, Kafka, Vault, Kubernetes, Docker, Terraform, Packer, Consul, TypeScript, GraphQL, Node, React, Google Cloud Platform, AWS, Traefik, GitHub, GitHub Actions, Prometheus, Loki, Linux, Shell</td></tr>
-    <tr><th scope='row'>Other Areas I Contribute</th><td>Python, Ruby, Elixir, Java, PHP, JavaScript, HCL, Objective-C, Lua, Painless, PostgreSQL, Redshift, Aurora, MongoDB, Cassandra, Elasticsearch, Neo4J, DynamoDB, Redis, Memcached, RabbitMQ, Pulsar, Rails, Django, Flask, Spark, Flink, Spring Boot, Guice, Express, Vue, Angular, Magento, Zend, Protobuf, gRPC</td></tr>
+    <tr><th scope='row'>Other Areas I Contribute</th><td>Python, Ruby, Elixir, Java, PHP, JavaScript, HCL, VimScript, Objective-C, Lua, Painless, PostgreSQL, MongoDB, Cassandra, Elasticsearch, Neo4J, Redis, Memcached, Rails, Django, Flask, Express, Vue, Spark, Flink, Spring Boot, Magento, Protobuf, gRPC</td></tr>
   </tbody>
 </table>
 
@@ -37,22 +37,21 @@ I am a senior software engineer for <a href="https://moov.io">Moov Financial, In
   </tbody>
 </table>-->
 
-  <!-- GitHub stats -->
+## GitHub Stats 
+
 <p align="center">
   <img width=48%" src="https://github-readme-stats-phi-lovat.vercel.app/api?username=darwinz&show_icons=true&count_private=true&hide=none&theme=tokyonight" alt="GitHub Stats"/>
   <img width="48%" src="https://github-readme-streak-stats.herokuapp.com/?user=darwinz&theme=tokyonight"/>
 </p>
 
----
-
-  <!-- vercel github profile trophy -->
+<!-- vercel github profile trophy -->
 <p align="center">
   <img src="https://github-profile-trophy.vercel.app/?username=darwinz&column=7&margin-w=8&theme=darkhub&title=MultipleLang,Commit,PullRequest,Repositories,Followers,Stars,Issues"/>
 </p>
 
 ---
 
-## Badges 
+## Hackathons and Badges
 
 <table>
 <tr>
@@ -78,9 +77,8 @@ I am a senior software engineer for <a href="https://moov.io">Moov Financial, In
   <p> Some fun facts </p>
   <ul>
     <li>I've founded/co-founded a few companies in the past, including a SAAS platform for real estate developers, an app allowing athletes to compare performance with pro athletes, and a dev consulting agency</li>
-    <li>My favorite programming language had been Python for years, but I've recently come to prefer Go for most things, followed by Python, Ruby, then TypeScript (and Node.js), and then Elixir</li>
-    <li>I like working for start-ups</li>
-    <li>Some projects I've worked on have been relatively high scale, considering that I've never worked at a big tech company.  Projects I've worked on include data pipelines ingesting TBs of data on a daily basis where our AWS bill was more than $1 million per month</li>
+    <li>My favorite programming language is Go, followed by Python, TypeScript (and Node.js), Ruby, Elixir, and then Java</li>
+    <li>Some projects I've worked on have been relatively high scale, considering that I've never worked at a big tech company.  Projects I've worked on include data pipelines ingesting TBs of data with an AWS bill of more than $1 million per month</li>
   </ul>
 
 ---
@@ -90,7 +88,7 @@ I am a senior software engineer for <a href="https://moov.io">Moov Financial, In
   <p><a href="https://johnsonbrandon.com" target="_blank">johnsonbrandon.com</a></p>
 
 
-  <p><a href="https://linkedin.com/in/brandonbjohnson" target="_blank"><img src="https://cdn.worldvectorlogo.com/logos/linkedin-icon-2.svg" alt="LinkedIn" width="50" height="50"></a>&nbsp;&nbsp;<a href="https://hackerrank.com/bbj1979" target="_blank"><img src="https://info.hackerrank.com/rs/487-WAY-049/images/Podcast-ChannelCover-Final.jpg" alt="HackerRank" width="50" height="50"></a>&nbsp;&nbsp;<a href="https://twitter.com/ubbjuntu" target="_blank"><img src="https://lh3.googleusercontent.com/proxy/ccN0shTnjkinKwCsFOi29h7nyCunGNF43CRBKW22aNVxQWlGqy4NWiQI_oilLalw-kYdOsLKJeRnhbu1jdTtI5F7vDTQWT_qg56MWDQE_cZ_fhIBUTA" alt="Twitter" width="50" height="50"></a><a href="https://www.quora.com/profile/Brandon-Johnson-5" target="_blank"><img src="https://static.wikia.nocookie.net/logopedia/images/8/83/Quora-512.png/revision/latest?cb=20200420105000" alt="Quora" width="50" height="50" /></a><a href="https://medium.com/@brandonjohnson_43523" target="_blank"><img src="https://cdn.iconscout.com/icon/free/png-256/medium-47-433328.png" alt="Medium" width="50" height="50" /></a></p>
+  <p><a href="https://linkedin.com/in/brandonbjohnson" target="_blank"><img src="https://cdn.worldvectorlogo.com/logos/linkedin-icon-2.svg" alt="LinkedIn" width="50" height="50"></a>&nbsp;&nbsp;<a href="https://hackerrank.com/bbj1979" target="_blank"><img src="https://info.hackerrank.com/rs/487-WAY-049/images/Podcast-ChannelCover-Final.jpg" alt="HackerRank" width="50" height="50"></a>&nbsp;&nbsp;<a href="https://leetcode.com/darwinz/" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/1/19/LeetCode_logo_black.png" alt="LeetCode" width="50" /></a>&nbsp;&nbsp;<a href="https://twitter.com/ubbjuntu" target="_blank"><img src="https://lh3.googleusercontent.com/proxy/ccN0shTnjkinKwCsFOi29h7nyCunGNF43CRBKW22aNVxQWlGqy4NWiQI_oilLalw-kYdOsLKJeRnhbu1jdTtI5F7vDTQWT_qg56MWDQE_cZ_fhIBUTA" alt="Twitter" width="50" height="50"></a><a href="https://www.quora.com/profile/Brandon-Johnson-5" target="_blank"><img src="https://static.wikia.nocookie.net/logopedia/images/8/83/Quora-512.png/revision/latest?cb=20200420105000" alt="Quora" width="50" height="50" /></a><a href="https://dev.to/darwinz" target="_blank"><img src="https://iconape.com/wp-content/files/hl/53010/svg/devto.svg" alt="Dev.to" width="50" /></a>&nbsp;&nbsp;<a href="https://hashnode.com/@darwinz" target="_blank"><img src="https://cdn.hashnode.com/res/hashnode/image/upload/v1611902473383/CDyAuTy75.png?auto=compress" alt="HashNode" width="50" /></a>&nbsp;&nbsp;<a href="https://aviyel.com/@darwinz" target="_blank"><img src="https://res.cloudinary.com/crunchbase-production/image/upload/c_lpad,h_256,w_256,f_auto,q_auto:eco,dpr_1/swh1bd4xma3yfwtxoozd" alt="Aviyel" width="50" /></a>&nbsp;&nbsp;<a href="https://medium.com/@brandonjohnson_43523" target="_blank"><img src="https://cdn.iconscout.com/icon/free/png-256/medium-47-433328.png" alt="Medium" width="50" height="50" /></a></p>
 
   <!-- spotify -->
 <!--  [![spotify-github-profile](https://spotify-github-profile.vercel.app/api/view?uid=121686652&cover_image=true)](https://github.com/darwinz) -->
