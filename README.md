@@ -8,11 +8,11 @@ Hello World, I'm Brandon Johnson (darwinz) 👋
 I am a senior software engineer for <a href="https://moov.io">Moov Financial, Inc.</a>, which has built a community of developers in the Financial Technology (Fintech) space.  Moov provides a number of popular <a href="https://github.com/moov-io">open source repositories</a>, and I've had the opportunity to contribute to a number of them and maintain a few as well.
 
 <!-- <table>
-<!--  <thead>
+  <thead>
     <tr>
       <th colspan="2">Quick Info</th>
     </tr>
-  </thead>-->
+  </thead>
   <tbody>
     <tr><th scope='row'>Role</th><td>Senior Software Engineer - Moov Financial, Inc.</td></tr>
     <tr><th scope='row'>Organization</th><td>Moov Financial, Moov-io</td></tr>
