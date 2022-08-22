@@ -7,7 +7,7 @@ Hello World, I'm Brandon Johnson (darwinz) 👋
 
 I am a senior software engineer for <a href="https://moov.io">Moov Financial, Inc.</a>, which has built a community of developers in the Financial Technology (Fintech) space.  Moov provides a number of popular <a href="https://github.com/moov-io">open source repositories</a>, and I've had the opportunity to contribute to a number of them and maintain a few as well.
 
-<table>
+<!-- <table>
 <!--  <thead>
     <tr>
       <th colspan="2">Quick Info</th>
@@ -19,7 +19,7 @@ I am a senior software engineer for <a href="https://moov.io">Moov Financial, In
     <tr><th scope='row'>Current Stack</th><td>Go, MySQL, OpenAPI, REST APIs, Kafka, Vault, Kubernetes, Docker, Terraform, Packer, Consul, TypeScript, GraphQL, Node, React, Google Cloud Platform, AWS, Traefik, GitHub, GitHub Actions, Prometheus, Loki, Linux, Shell</td></tr>
     <tr><th scope='row'>Other Areas I Contribute</th><td>Python, Ruby, Elixir, Java, PHP, JavaScript, HCL, VimScript, Objective-C, Lua, Painless, PostgreSQL, MongoDB, Cassandra, Elasticsearch, Neo4J, Redis, Memcached, Rails, Django, Flask, Express, Vue, Spark, Flink, Spring Boot, Magento, Protobuf, gRPC</td></tr>
   </tbody>
-</table>
+</table> -->
 
 ---
 
