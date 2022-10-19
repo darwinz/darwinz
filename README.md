@@ -56,12 +56,12 @@ I am a senior software engineer for <a href="https://moov.io">Moov Financial, In
 <table>
 <tr>
 <td align="center"><a href="https://www.holopin.io/@darwinz" title="Hacktoberfest 2022 - Contributor"><img src="https://www.holopin.io/_next/image?url=https%3A%2F%2Fassets.holopin.io%2FeyJidWNrZXQiOiJob2xvcGluLWFzc2V0cyIsImtleSI6ImFzc2V0cy9jbDhkOHVrb3MwMDk0MDlqbnVuaGRhcDd3IiwiZWRpdHMiOnsicm90YXRlIjpudWxsfX0%3D&w=3840&q=75" width="120px"></a></td>
-<td align="center"><a href="https://dev.to/darwinz" title="2 year club"><img src="https://res.cloudinary.com/practicaldev/image/fetch/s--7LzjnbaB--/c_limit,f_auto,fl_progressive,q_80,w_180/https://dev-to-uploads.s3.amazonaws.com/uploads/badge/badge_image/9/2year-Badge-shadow__1_.png" width="70px"></a></td>
+<td align="center"><a href="https://dev.to/darwinz" title="2 year club - Dev.to"><img src="https://res.cloudinary.com/practicaldev/image/fetch/s--7LzjnbaB--/c_limit,f_auto,fl_progressive,q_80,w_180/https://dev-to-uploads.s3.amazonaws.com/uploads/badge/badge_image/9/2year-Badge-shadow__1_.png" width="70px"></a></td>
 <td align="center"><a href="https://dev.to/darwinz" title="AppWrite Hackathon"><img src="https://res.cloudinary.com/practicaldev/image/fetch/s--7J0lDU97--/c_limit,f_auto,fl_progressive,q_80,w_375/https://dev-to-uploads.s3.amazonaws.com/uploads/badge/badge_image/166/appwrite-participant-adge.png" width="70px"></a></td>
 <td align="center"><a href="https://dev.to/darwinz" title="Hacktoberfest 2021"><img src="https://res.cloudinary.com/practicaldev/image/fetch/s--cm4PWdMq--/c_limit,f_auto,fl_progressive,q_80,w_375/https://dev-to-uploads.s3.amazonaws.com/uploads/badge/badge_image/131/hacktoberfest-2021-badge.png" width="80px"></a></td>
-<td align="center"><a href="https://dev.to/darwinz" title="One Year Club"><img src="https://res.cloudinary.com/practicaldev/image/fetch/s--4f5VWKQw--/c_limit,f_auto,fl_progressive,q_80,w_375/https://dev-to-uploads.s3.amazonaws.com/uploads/badge/badge_image/2/1-year-badge.png" width="80px"></a></td>
+<td align="center"><a href="https://dev.to/darwinz" title="One Year Club - Dev.to"><img src="https://res.cloudinary.com/practicaldev/image/fetch/s--4f5VWKQw--/c_limit,f_auto,fl_progressive,q_80,w_375/https://dev-to-uploads.s3.amazonaws.com/uploads/badge/badge_image/2/1-year-badge.png" width="80px"></a></td>
 <td align="center"><a href="https://dev.to/darwinz" title="Hacktoberfest 2020"><img src="https://res.cloudinary.com/practicaldev/image/fetch/s--ipK3ZYfm--/c_limit,f_auto,fl_progressive,q_80,w_375/https://dev-to-uploads.s3.amazonaws.com/uploads/badge/badge_image/80/hacktoberfest2020-badge_2.png" width="80px"></a></td>
-<td align="center"><a href="https://aviyel.com/@darwinz" title="Aviyel Early Adopter"><img src="https://aviyel.com/assets/uploads/rewards/project_rewards/32/aviyel_early_adopter/512/1.png" width="80px"></a></td>
+<td align="center"><a href="https://aviyel.com/@darwinz" title="Aviyel Early Adopter - Aviyel"><img src="https://aviyel.com/assets/uploads/rewards/project_rewards/32/aviyel_early_adopter/512/1.png" width="80px"></a></td>
 </tr>
 </table>
 
