@@ -5,7 +5,7 @@
 
 Hello World, I'm Brandon Johnson (darwinz) 👋
 
-I am a senior software engineer for <a href="https://moov.io">Moov Financial, Inc.</a>, which has built a community of developers in the Financial Technology (Fintech) space.  Moov provides a number of popular <a href="https://github.com/moov-io">open source repositories</a>, and I've had the opportunity to contribute to a number of them and am a maintainer for a couple as well.
+I am a lead software engineer at <a href="https://nerdunited.com">Nerd United</a>.  Nerd is a blockchain incubator, driving innovation and positive values into the blockchain space.  I also contribute to open source, participate in hackathons, and have been a maintainer for a couple of popular open source repositories.
 
 <!-- <table>
   <thead>
