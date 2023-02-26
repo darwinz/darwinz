@@ -5,7 +5,7 @@
 
 Hello World, I'm Brandon Johnson (darwinz) 👋
 
-I am a lead software engineer at <a href="https://nerdunited.com">Nerd United</a>.  Nerd is a blockchain incubator, driving innovation and positive values into the blockchain space.  I also contribute to open source, participate in hackathons, and have been a maintainer for a couple of popular open source repositories.
+I am a principal/lead software engineer at <a href="https://nerdunited.com">Nerd United</a>.  Nerd is a blockchain incubator, driving innovation and positive values into the blockchain space.  I also contribute to open source, participate in hackathons, and have been a maintainer for a couple of popular open source repositories.
 
 <!-- <table>
   <thead>
