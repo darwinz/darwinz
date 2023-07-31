@@ -68,7 +68,7 @@ I am a principal/lead software engineer at <a href="https://nerdunited.com">Nerd
 ----
 
 <!-- platane/snk gif generated to 'output' branch -->
-![darwinz snake gif](https://github.com/darwinz/darwinz/blob/output/github-contribution-grid-snake.svg)
+![darwinz snake gif](https://github.com/darwinz/darwinz/blob/output/github-snake.svg)
 
 ---
 
