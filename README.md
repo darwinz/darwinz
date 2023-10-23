@@ -55,7 +55,7 @@ I am a principal/lead software engineer at <a href="https://nerdunited.com">Nerd
 
 <table>
 <tr>
-<td align="center"><a href="https://www.holopin.io/hacktoberfest2023/userbadge/clo25lu2235070flbidu15mjw" title="Hacktoberfest 2023 Hall of Fame"><img src="https://assets.holopin.io/hf2023levels/level4-silver-helmet-0-0.webp" width="70px"></a></td>
+<td align="center"><a href="https://www.holopin.io/hacktoberfest2023/userbadge/clo25lu2235070flbidu15mjw" title="Hacktoberfest 2023 Hall of Fame"><img src="https://assets.holopin.io/hf2023levels/level4-silver-helmet-0-0.webp" width="120px"></a></td>
 <td align="center"><a href="https://www.holopin.io/@darwinz" title="Hacktoberfest 2023 - Participant"><img src="https://assets.holopin.io/eyJidWNrZXQiOiJob2xvcGluLWFzc2V0cyIsImtleSI6ImFzc2V0cy9jbG16MW5neWQwMjM3bTN6am50c2V6Yng2IiwiZWRpdHMiOnsicm90YXRlIjpudWxsfX0=" width="110px"></a></td>
 <td align="center"><a href="https://www.holopin.io/@darwinz" title="Hacktoberfest 2022 - Contributor"><img src="https://assets.holopin.io/eyJidWNrZXQiOiJob2xvcGluLWFzc2V0cyIsImtleSI6ImFzc2V0cy9jbDhkOHVrb3MwMDk0MDlqbnVuaGRhcDd3IiwiZWRpdHMiOnsicm90YXRlIjpudWxsfX0=" width="120px"></a></td>
 <td align="center"><a href="https://dev.to/darwinz" title="AppWrite Hackathon"><img src="https://res.cloudinary.com/practicaldev/image/fetch/s--7J0lDU97--/c_limit,f_auto,fl_progressive,q_80,w_375/https://dev-to-uploads.s3.amazonaws.com/uploads/badge/badge_image/166/appwrite-participant-adge.png" width="70px"></a></td>
