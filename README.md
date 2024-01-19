@@ -63,7 +63,6 @@ I am a senior software engineer at <a href="https://moov.io">Moov Financial</a>.
 <td align="center"><a href="https://www.holopin.io/@darwinz" title="AppWrite Hackathon Participan"><img src="https://assets.holopin.io/eyJidWNrZXQiOiJob2xvcGluLWFzc2V0cyIsImtleSI6ImFzc2V0cy9jbGFqeHF4eTUwNDMzMDhqc3k3bXp1NmlwIiwiZWRpdHMiOnsicm90YXRlIjpudWxsfX0=" width="100px"></a></td>
 <td align="center"><a href="https://dev.to/darwinz" title="Hacktoberfest 2021"><img src="https://res.cloudinary.com/practicaldev/image/fetch/s--cm4PWdMq--/c_limit,f_auto,fl_progressive,q_80,w_375/https://dev-to-uploads.s3.amazonaws.com/uploads/badge/badge_image/131/hacktoberfest-2021-badge.png" width="80px"></a></td>
 <td align="center"><a href="https://dev.to/darwinz" title="Hacktoberfest 2020"><img src="https://res.cloudinary.com/practicaldev/image/fetch/s--ipK3ZYfm--/c_limit,f_auto,fl_progressive,q_80,w_375/https://dev-to-uploads.s3.amazonaws.com/uploads/badge/badge_image/80/hacktoberfest2020-badge_2.png" width="80px"></a></td>
-<td align="center"><a href="https://aviyel.com/@darwinz" title="Aviyel Early Adopter - Aviyel"><img src="https://aviyel.com/assets/uploads/rewards/project_rewards/32/aviyel_early_adopter/512/1.png" width="80px"></a></td>
 </tr>
 </table>
 
