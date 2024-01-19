@@ -5,7 +5,7 @@
 
 Hello World, I'm Brandon Johnson (darwinz) 👋
 
-I am a principal/lead software engineer at <a href="https://nerdunited.com">Nerd United</a>.  Nerd is a blockchain incubator, driving innovation and positive values into the blockchain space.  I also contribute to open source and participate in hackathons, and I'm also the maintainer and the top contributor for a <a href="https://github.com/thealgorithms/php">popular open source repository</a>, which has more than 1,400 stars and more than 370 forks.
+I am a senior software engineer at <a href="https://moov.io">Moov Financial</a>.  Moov is a fintech company driving innovative solutions in the payments space.  I also contribute to open source and participate in hackathons, and I'm also the maintainer and the top contributor for a <a href="https://github.com/thealgorithms/php">popular open source repository</a>.
 
 <!-- <table>
   <thead>
