@@ -39,11 +39,11 @@ I am a senior software engineer at <a href="https://moov.io">Moov Financial</a>.
 
 ## GitHub Stats 
 
-<p align="center">
-  <img width="48%" src="https://github-readme-stats-p8xswl22v.vercel.app/api?username=darwinz&show_icons=true&count_private=true&hide=none&theme=tokyonight" alt="GitHub Stats" />
+<!-- <p align="center">
+  <img width="48%" src="https://github-readme-stats-p8xswl22v.vercel.app/api?username=darwinz&show_icons=true&count_private=true&hide=none&theme=tokyonight" alt="GitHub Stats" /> -->
   <!--<img width=48%" src="https://github-readme-stats-phi-lovat.vercel.app/api?username=darwinz&show_icons=true&count_private=true&hide=none&theme=tokyonight" alt="GitHub Stats"/>-->
-  <img width="49%"  src="https://github-readme-streak-stats-two-topaz.vercel.app?user=darwinz&theme=tokyonight&exclude_days=Sun%2CSat&card_height=200" alt="GitHub Streak" />
-</p>
+<!--  <img width="49%"  src="https://github-readme-streak-stats-two-topaz.vercel.app?user=darwinz&theme=tokyonight&exclude_days=Sun%2CSat&card_height=200" alt="GitHub Streak" />
+</p> -->
 
 <!-- vercel github profile trophy -->
 <p align="center">
