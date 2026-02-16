@@ -39,11 +39,18 @@ I am a senior software engineer at <a href="https://moov.io">Moov Financial</a>.
 
 ## GitHub Stats 
 
-<!-- <p align="center">
-  <img width="48%" src="https://github-readme-stats-p8xswl22v.vercel.app/api?username=darwinz&show_icons=true&count_private=true&hide=none&theme=tokyonight" alt="GitHub Stats" /> -->
-  <!--<img width=48%" src="https://github-readme-stats-phi-lovat.vercel.app/api?username=darwinz&show_icons=true&count_private=true&hide=none&theme=tokyonight" alt="GitHub Stats"/>-->
-<!--  <img width="49%"  src="https://github-readme-streak-stats-two-topaz.vercel.app?user=darwinz&theme=tokyonight&exclude_days=Sun%2CSat&card_height=200" alt="GitHub Streak" />
-</p> -->
+<p align="center">
+  <img
+    width="48%"
+    src="https://github-readme-stats.vercel.app/api?username=darwinz&show_icons=true&count_private=true&hide=none&theme=tokyonight&cache_seconds=86400"
+    alt="GitHub Stats"
+  />
+  <img
+    width="49%"
+    src="https://streak-stats.demolab.com?user=darwinz&theme=tokyonight&exclude_days=Sun%2CSat"
+    alt="GitHub Streak"
+  />
+</p>
 
 <!-- vercel github profile trophy -->
 <p align="center">
@@ -68,7 +75,7 @@ I am a senior software engineer at <a href="https://moov.io">Moov Financial</a>.
 ----
 
 <!-- platane/snk gif generated to 'output' branch -->
-![darwinz snake gif](https://github.com/darwinz/darwinz/blob/output/github-snake-dark.svg)
+![darwinz snake gif](https://raw.githubusercontent.com/darwinz/darwinz/output/github-snake-dark.svg)
 
 ---
 
@@ -87,7 +94,7 @@ I am a senior software engineer at <a href="https://moov.io">Moov Financial</a>.
 
 ### Find me around the web
 
-<p><a href="https://johnsonbrandon.com" target="_blank"><img src="https://www.johnsonbrandon.com/img/right-1.png" alt="Personal Website" width="80" /></a><a href="https://linkedin.com/in/brandonbjohnson" target="_blank"><img src="https://cdn.worldvectorlogo.com/logos/linkedin-icon-2.svg" alt="LinkedIn" width="50" height="50"></a>&nbsp;&nbsp;<a href="https://hackerrank.com/bbj1979" target="_blank"><img src="https://info.hackerrank.com/rs/487-WAY-049/images/Podcast-ChannelCover-Final.jpg" alt="HackerRank" width="50" height="50"></a>&nbsp;<a href="https://leetcode.com/darwinz/" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/1/19/LeetCode_logo_black.png" alt="LeetCode" width="50" /></a>&nbsp;<a href="https://twitter.com/ubbjuntu" target="_blank"><img src="https://lh3.googleusercontent.com/proxy/ccN0shTnjkinKwCsFOi29h7nyCunGNF43CRBKW22aNVxQWlGqy4NWiQI_oilLalw-kYdOsLKJeRnhbu1jdTtI5F7vDTQWT_qg56MWDQE_cZ_fhIBUTA" alt="Twitter" width="50" height="50"></a><a href="https://www.quora.com/profile/Brandon-Johnson-5" target="_blank"><img src="https://static.wikia.nocookie.net/logopedia/images/8/83/Quora-512.png/revision/latest?cb=20200420105000" alt="Quora" width="50" height="50" /></a><a href="https://dev.to/darwinz" target="_blank"><img src="https://iconape.com/wp-content/files/hl/53010/svg/devto.svg" alt="Dev.to" width="50" /></a>&nbsp;<a href="https://hashnode.com/@darwinz" target="_blank"><img src="https://cdn.hashnode.com/res/hashnode/image/upload/v1611902473383/CDyAuTy75.png?auto=compress" alt="HashNode" width="50" /></a><a href="https://medium.com/@brandonjohnson_43523" target="_blank"><img src="https://cdn.iconscout.com/icon/free/png-256/medium-47-433328.png" alt="Medium" width="50" height="50" /></a></p>
+<p><a href="https://johnsonbrandon.com" target="_blank"><img src="https://www.johnsonbrandon.com/img/right-1.png" alt="Personal Website" width="80" /></a><a href="https://linkedin.com/in/brandonbjohnson" target="_blank"><img src="https://cdn.worldvectorlogo.com/logos/linkedin-icon-2.svg" alt="LinkedIn" width="50" height="50"></a>&nbsp;&nbsp;<a href="https://hackerrank.com/bbj1979" target="_blank"><img src="https://cdn.jsdelivr.net/npm/simple-icons/icons/hackerrank.svg" alt="HackerRank" width="50" height="50"></a>&nbsp;<a href="https://leetcode.com/darwinz/" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/1/19/LeetCode_logo_black.png" alt="LeetCode" width="50" /></a>&nbsp;<a href="https://twitter.com/ubbjuntu" target="_blank"><img src="https://lh3.googleusercontent.com/proxy/ccN0shTnjkinKwCsFOi29h7nyCunGNF43CRBKW22aNVxQWlGqy4NWiQI_oilLalw-kYdOsLKJeRnhbu1jdTtI5F7vDTQWT_qg56MWDQE_cZ_fhIBUTA" alt="Twitter" width="50" height="50"></a><a href="https://www.quora.com/profile/Brandon-Johnson-5" target="_blank"><img src="https://static.wikia.nocookie.net/logopedia/images/8/83/Quora-512.png/revision/latest?cb=20200420105000" alt="Quora" width="50" height="50" /></a><a href="https://dev.to/darwinz" target="_blank"><img src="https://iconape.com/wp-content/files/hl/53010/svg/devto.svg" alt="Dev.to" width="50" /></a>&nbsp;<a href="https://hashnode.com/@darwinz" target="_blank"><img src="https://cdn.hashnode.com/res/hashnode/image/upload/v1611902473383/CDyAuTy75.png?auto=compress" alt="HashNode" width="50" /></a><a href="https://medium.com/@brandonjohnson_43523" target="_blank"><img src="https://cdn.iconscout.com/icon/free/png-256/medium-47-433328.png" alt="Medium" width="50" height="50" /></a></p>
 
 <!-- spotify -->
 <!--  [![spotify-github-profile](https://spotify-github-profile.vercel.app/api/view?uid=121686652&cover_image=true)](https://github.com/darwinz) -->
