@@ -42,7 +42,7 @@ I am a senior software engineer at <a href="https://moov.io">Moov Financial</a>.
 <p align="center">
   <img
     width="48%"
-    src="https://github-readme-stats-phi-lovat.vercel.app/api?username=darwinz&show_icons=true&count_private=true&hide=none&theme=tokyonight&cache_seconds=86400"
+    src="https://github-readme-stats-phi-lovat.vercel.app/api?username=darwinz&show_icons=true&count_private=true&include_all_commits=true&hide=none&theme=tokyonight&cache_seconds=86400"
     alt="GitHub Stats"
   />
   <img
