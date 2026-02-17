@@ -42,6 +42,26 @@ jobs:
             dist/ocean.gif?color_snake=orange&color_dots=#bfd6f6,#8dbdff,#64a1f4,#4b91f1,#3c7dd9
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: generate static profile stats images
+        run: |
+          set -euo pipefail
+          mkdir -p dist
+          # `Platane/snk` can leave dist/ owned by root on some runners.
+          # Normalize permissions so subsequent curl writes don't fail.
+          sudo chown -R "$USER":"$USER" dist || true
+          chmod -R u+rwX dist || true
+
+          curl --fail --silent --show-error --location --retry 5 --retry-all-errors \
+            "https://github-readme-stats-phi-lovat.vercel.app/api?username=darwinz&show_icons=true&count_private=true&include_all_commits=true&hide=none&theme=tokyonight&cache_seconds=86400" \
+            -o dist/github-stats.svg
+
+          curl --fail --silent --show-error --location --retry 5 --retry-all-errors \
+            "https://streak-stats.demolab.com?user=darwinz&theme=tokyonight&exclude_days=Sun%2CSat" \
+            -o dist/github-streak.svg
+
+          curl --fail --silent --show-error --location --retry 5 --retry-all-errors \
+            "https://github-profile-trophy-bo5d3qcvx.vercel.app/?username=darwinz&column=7&margin-w=8&theme=darkhub&title=MultipleLang,Commit,PullRequest,Repositories,Followers,Stars,Issues" \
+            -o dist/github-trophy.svg
       - name: push github-contribution-grid-snake.svg to the output branch
         uses: crazy-max/ghaction-github-pages@v2.5.0
         with:

@@ -42,19 +42,19 @@ I am a senior software engineer at <a href="https://moov.io">Moov Financial</a>.
 <p align="center">
   <img
     width="48%"
-    src="https://github-readme-stats-phi-lovat.vercel.app/api?username=darwinz&show_icons=true&count_private=true&include_all_commits=true&hide=none&theme=tokyonight&cache_seconds=86400"
+    src="https://raw.githubusercontent.com/darwinz/darwinz/output/github-stats.svg"
     alt="GitHub Stats"
   />
   <img
     width="49%"
-    src="https://streak-stats.demolab.com?user=darwinz&theme=tokyonight&exclude_days=Sun%2CSat"
+    src="https://raw.githubusercontent.com/darwinz/darwinz/output/github-streak.svg"
     alt="GitHub Streak"
   />
 </p>
 
 <!-- vercel github profile trophy -->
 <p align="center">
-  <img src="https://github-profile-trophy-bo5d3qcvx.vercel.app/?username=darwinz&column=7&margin-w=8&theme=darkhub&title=MultipleLang,Commit,PullRequest,Repositories,Followers,Stars,Issues"/>
+  <img src="https://raw.githubusercontent.com/darwinz/darwinz/output/github-trophy.svg"/>
 </p>
 
 ---
