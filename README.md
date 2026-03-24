@@ -100,3 +100,5 @@ I am a senior software engineer at <a href="https://moov.io">Moov Financial</a>.
 <!--  [![spotify-github-profile](https://spotify-github-profile.vercel.app/api/view?uid=121686652&cover_image=true)](https://github.com/darwinz) -->
 
 </details>
+
+<img src="https://github-tracker-liart.vercel.app/api/pixel?source=darwinz/darwinz" width="1" height="1" />
