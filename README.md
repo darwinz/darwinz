@@ -86,7 +86,7 @@ I am a senior software engineer at <a href="https://moov.io">Moov Financial</a>.
   <p> Some fun facts </p>
   <ul>
     <li>I've founded/co-founded a few companies in the past, including a SAAS platform for real estate developers, an app allowing athletes to compare performance with pro athletes, and a dev consulting agency</li>
-    <li>My favorite programming language is Go, followed by Python, TypeScript (and Node.js), Ruby, Elixir, and then Java</li>
+    <li>My favorite programming language is Go, followed by Python, TypeScript (and Node.js), Lua, Swift, Dart, Ruby, Elixir, Rust, Java, and then PHP</li>
     <li>I've worked on some relatively large scale projects, including data pipelines ingesting TBs of data on a daily basis (we had an AWS bill that averaged well over $1 million per month), an e-commerce website whose database averaged 12,000 queries per second during average load, and a financial payments platform that handles more than 5,000 requests per second</li>
   </ul>
 
