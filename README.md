@@ -7,6 +7,10 @@
 
 I run **[Fullspec Studio](https://fullspecstudio.com)**, a small software studio in Utah that builds across the whole spectrum: **infrastructure, interface, and intelligence**. Before the studio, I spent about 19 years building distributed systems, payments infrastructure, and developer platforms at companies like Moov Financial and Cricut.
 
+<p align="center">
+  <img src="assets/spectrum.svg" width="100%" alt="The full spectrum: Systems Design, Infra, DevOps, Data, AI, Backend, Frontend" />
+</p>
+
 The studio runs two lines of work under one roof:
 
 <table>
