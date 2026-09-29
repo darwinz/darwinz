@@ -1,8 +1,3 @@
-<!-- top left -->
-<a href="#">
-    <img src="https://media1.giphy.com/media/L0C3eo0XgklO7iqXRC/source.gif" width="100" height="60"/> 
-</a>
-
 ### Hello World, I'm Brandon Johnson (darwinz) 👋
 
 I run **[Fullspec Studio](https://fullspecstudio.com)**, a small software studio in Utah that builds across the whole spectrum: **infrastructure, interface, and intelligence**. Before the studio, I spent about 19 years building distributed systems, payments infrastructure, and developer platforms at companies like Moov Financial and Cricut.
@@ -98,6 +93,11 @@ I also contribute to open source and join hackathons, and I maintain (and am the
     <li>My favorite programming language is Go, followed by Python, TypeScript (and Node.js), Lua, Swift, Dart, Ruby, Elixir, Rust, Java, and then PHP</li>
     <li>I've worked on some fairly large-scale systems, including data pipelines ingesting TBs of data every day (with an AWS bill averaging well over $1 million per month), an e-commerce site whose database averaged 12,000 queries per second under normal load, and a payments platform handling more than 5,000 requests per second</li>
   </ul>
+
+<!-- generated daily by .github/workflows/languages.yml into the metrics branch -->
+<p align="center">
+  <img src="https://raw.githubusercontent.com/darwinz/darwinz/metrics/languages.svg" width="100%" alt="Languages I've written, weighted by commits and lines across every repo" />
+</p>
 
 ---
 
