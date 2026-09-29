@@ -39,9 +39,8 @@ The studio runs two lines of work under one roof:
 </table>
 
 <p>
-  <a href="https://fullspecstudio.com" target="_blank"><img src="https://img.shields.io/badge/Studio-fullspecstudio.com-24292e?style=for-the-badge&logo=google-chrome&logoColor=white" alt="Fullspec Studio" /></a>
-  &nbsp;
-  <a href="https://fullspecstudio.com/discuss" target="_blank"><img src="https://img.shields.io/badge/Discuss_a_project-→-24292e?style=for-the-badge" alt="Discuss a project" /></a>
+  <a href="https://fullspecstudio.com/discuss" target="_blank"><img src="assets/btn-discuss.svg" width="232" alt="Discuss a project" /></a>
+  <a href="https://fullspecstudio.com" target="_blank"><img src="assets/btn-studio.svg" width="232" alt="fullspecstudio.com" /></a>
 </p>
 
 I also contribute to open source and join hackathons, and I maintain (and am the top contributor to) <a href="https://github.com/thealgorithms/php">TheAlgorithms/PHP</a>.

@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="232" height="68" viewBox="0 0 232 68" role="img" aria-label="Discuss a project">
+  <title>Discuss a project</title>
+  <defs>
+    <filter id="s" x="-20%" y="-40%" width="140%" height="200%">
+      <feDropShadow dx="0" dy="4" stdDeviation="5" flood-color="#b25a3e" flood-opacity="0.35"/>
+    </filter>
+  </defs>
+  <rect x="12" y="10" width="208" height="44" rx="22" fill="#b25a3e" filter="url(#s)"/>
+  <text x="40" y="37" textLength="130" lengthAdjust="spacingAndGlyphs" fill="#fafaf8" font-family="Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="15" font-weight="500">Discuss a project</text>
+  <path d="M180 32h12m-5-5 5 5-5 5" fill="none" stroke="#fafaf8" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
