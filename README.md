@@ -16,11 +16,12 @@ The studio runs two lines of work under one roof:
 **🛠️ Products**<br/>
 <sub>AI-native software we build and ship ourselves</sub>
 
-- **[Cue](https://fullspecstudio.com/work/cue)**: voice-first prompt engineering for Mac
-- **[JobMap](https://fullspecstudio.com/work/jobmap)**: a job search, run like a pipeline
-- **[Crawlspace](https://fullspecstudio.com/work/crawlspace)**: self-hosted SEO platform with an MCP server
 - **[ImgCrisp](https://fullspecstudio.com/work/imgcrisp)**: honest WordPress image optimization
 - **[AnswerEng](https://answereng.io)**: what AI answer engines say about your brand
+- **[Crawlspace](https://fullspecstudio.com/work/crawlspace)**: self-hosted SEO platform with an MCP server
+- **[Cue](https://fullspecstudio.com/work/cue)**: voice-first prompt engineering for Mac
+- **[JobMap](https://fullspecstudio.com/work/jobmap)**: a job search, run like a pipeline
+- **HIPAA-aware Intake Assistant** _(site coming soon)_
 
 </td>
 <td width="50%" valign="top">
@@ -95,9 +96,10 @@ I also contribute to open source and join hackathons, and I maintain (and am the
 
   <p> Some fun facts </p>
   <ul>
-    <li>I've founded/co-founded a few companies in the past, including a SAAS platform for real estate developers, an app allowing athletes to compare performance with pro athletes, and a dev consulting agency</li>
+    <li>Fullspec Studio isn't my first company. I've founded or co-founded a few others, including a SaaS platform for real estate developers, an app that let athletes compare their performance with pro athletes, and a dev consulting agency</li>
+    <li>The "full spectrum" in Fullspec is literal: over about 19 years I've been the specialist on each layer of the stack in turn (infrastructure, data, backend, frontend), going deep on one at a time</li>
     <li>My favorite programming language is Go, followed by Python, TypeScript (and Node.js), Lua, Swift, Dart, Ruby, Elixir, Rust, Java, and then PHP</li>
-    <li>I've worked on some relatively large scale projects, including data pipelines ingesting TBs of data on a daily basis (we had an AWS bill that averaged well over $1 million per month), an e-commerce website whose database averaged 12,000 queries per second during average load, and a financial payments platform that handles more than 5,000 requests per second</li>
+    <li>I've worked on some fairly large-scale systems, including data pipelines ingesting TBs of data every day (with an AWS bill averaging well over $1 million per month), an e-commerce site whose database averaged 12,000 queries per second under normal load, and a payments platform handling more than 5,000 requests per second</li>
   </ul>
 
 ---
@@ -106,6 +108,8 @@ I also contribute to open source and join hackathons, and I maintain (and am the
 
 <p>
   <a href="https://johnsonbrandon.com" target="_blank"><img src="https://img.shields.io/badge/Portfolio-johnsonbrandon.com-24292e?style=for-the-badge&logo=google-chrome&logoColor=white" alt="Personal Website" /></a>
+  &nbsp;
+  <a href="https://fullspecstudio.com/log" target="_blank"><img src="https://img.shields.io/badge/Studio_Log-fullspecstudio.com%2Flog-24292e?style=for-the-badge&logo=rss&logoColor=white" alt="Fullspec Studio Log" /></a>
   &nbsp;
   <a href="https://linkedin.com/in/brandonbjohnson" target="_blank"><img src="https://img.shields.io/badge/LinkedIn-Brandon_Johnson-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn" /></a>
 </p>
