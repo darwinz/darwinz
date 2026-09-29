@@ -70,18 +70,16 @@ I also contribute to open source and join hackathons, and I maintain (and am the
 
 ---
 
-## Hackathons and Badges
+## Open Source
 
-<table>
-<tr>
-<td align="center"><a href="https://www.holopin.io/hacktoberfest2023/userbadge/clo25lu2235070flbidu15mjw" title="Hacktoberfest 2023 Hall of Fame"><img src="https://assets.holopin.io/hf2023levels/level4-silver-helmet-0-0.webp" width="120px"></a></td>
-<td align="center"><a href="https://www.holopin.io/@darwinz" title="Hacktoberfest 2023 - Participant"><img src="https://assets.holopin.io/eyJidWNrZXQiOiJob2xvcGluLWFzc2V0cyIsImtleSI6ImFzc2V0cy9jbG16MW5neWQwMjM3bTN6am50c2V6Yng2IiwiZWRpdHMiOnsicm90YXRlIjpudWxsfX0=" width="110px"></a></td>
-<td align="center"><a href="https://www.holopin.io/@darwinz" title="Hacktoberfest 2022 - Contributor"><img src="https://assets.holopin.io/eyJidWNrZXQiOiJob2xvcGluLWFzc2V0cyIsImtleSI6ImFzc2V0cy9jbDhkOHVrb3MwMDk0MDlqbnVuaGRhcDd3IiwiZWRpdHMiOnsicm90YXRlIjpudWxsfX0=" width="120px"></a></td>
-<td align="center"><a href="https://www.holopin.io/@darwinz" title="AppWrite Hackathon Participan"><img src="https://assets.holopin.io/eyJidWNrZXQiOiJob2xvcGluLWFzc2V0cyIsImtleSI6ImFzc2V0cy9jbGFqeHF4eTUwNDMzMDhqc3k3bXp1NmlwIiwiZWRpdHMiOnsicm90YXRlIjpudWxsfX0=" width="100px"></a></td>
-<td align="center"><a href="https://dev.to/darwinz" title="Hacktoberfest 2021"><img src="https://www.jdno.dev/content/images/size/w1200/2021/10/Hacktoberfest_Wallpaper_desktop-02.png" width="120px"></a></td>
-<td align="center"><a href="https://dev.to/darwinz" title="Hacktoberfest 2020"><img src="https://doimages.nyc3.cdn.digitaloceanspaces.com/Hacktoberfest2020.png" width="120px"></a></td>
-</tr>
-</table>
+<p align="center">
+  <a href="https://github.com/TheAlgorithms/PHP"><img width="49%" src="https://raw.githubusercontent.com/darwinz/darwinz/output/pin-PHP.svg" alt="TheAlgorithms/PHP" /></a>
+  <a href="https://github.com/moov-io/ach"><img width="49%" src="https://raw.githubusercontent.com/darwinz/darwinz/output/pin-ach.svg" alt="moov-io/ach" /></a>
+</p>
+<p align="center">
+  <a href="https://github.com/moovfinancial/moov-go"><img width="49%" src="https://raw.githubusercontent.com/darwinz/darwinz/output/pin-moov-go.svg" alt="moovfinancial/moov-go" /></a>
+  <a href="https://github.com/Fullspec-Studio/aeo-engine"><img width="49%" src="https://raw.githubusercontent.com/darwinz/darwinz/output/pin-aeo-engine.svg" alt="Fullspec-Studio/aeo-engine" /></a>
+</p>
 
 ----
 

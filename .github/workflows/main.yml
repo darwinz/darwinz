@@ -62,6 +62,13 @@ jobs:
           curl --fail --silent --show-error --location --retry 5 --retry-all-errors \
             "https://github-profile-trophy-bo5d3qcvx.vercel.app/?username=darwinz&column=7&margin-w=8&theme=darkhub&title=MultipleLang,Commit,PullRequest,Repositories,Followers,Stars,Issues" \
             -o dist/github-trophy.svg
+
+          # open source repo cards
+          for repo in TheAlgorithms/PHP moov-io/ach moovfinancial/moov-go Fullspec-Studio/aeo-engine; do
+            curl --fail --silent --show-error --location --retry 5 --retry-all-errors \
+              "https://github-readme-stats-phi-lovat.vercel.app/api/pin?username=${repo%%/*}&repo=${repo##*/}&show_owner=true&theme=tokyonight&cache_seconds=86400" \
+              -o "dist/pin-${repo##*/}.svg"
+          done
       - name: push github-contribution-grid-snake.svg to the output branch
         uses: crazy-max/ghaction-github-pages@v2.5.0
         with:
