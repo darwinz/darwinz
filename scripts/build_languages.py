@@ -133,6 +133,60 @@ def language_for(path: str) -> tuple[str, str] | None:
     return LANGUAGES.get(ext)
 
 
+LAYER_WINDOW_DAYS = 90
+
+# Commits whose diffs mention these count their code toward the AI layer.
+AI_PATTERN = (
+    r"anthropic|openai|bedrock|langchain|llama_?index|@ai-sdk|modelcontextprotocol|FastMCP"
+    r"|embeddings?\(|chat\.completions|messages\.create"
+)
+CODE_EXT = {
+    ".go", ".py", ".rb", ".ex", ".exs", ".rs", ".java", ".kt", ".scala", ".php", ".cs",
+    ".ts", ".tsx", ".mts", ".js", ".jsx", ".mjs", ".cjs", ".swift", ".dart",
+}
+FRONTEND_EXT = {".tsx", ".jsx", ".vue", ".svelte", ".astro", ".css", ".scss", ".html", ".swift", ".dart"}
+BACKEND_EXT = {".go", ".py", ".rb", ".ex", ".exs", ".rs", ".java", ".scala", ".php", ".cs", ".ts", ".mts", ".js", ".mjs", ".cjs"}
+
+LAYER_RULES = [
+    ("Systems Design", re.compile(
+        r"(^|/)(adrs?|rfcs?|architecture|design)/.*\.mdx?$|(openapi|swagger|asyncapi)[^/]*\.(ya?ml|json)$"
+        r"|\.proto$|\.(graphql|gql)$"
+    )),
+    ("DevOps", re.compile(
+        r"(^|/)\.github/workflows/|(^|/)\.gitlab-ci|(^|/)\.circleci/|(^|/)(Jenkinsfile|Makefile|Taskfile\.ya?ml)$"
+        r"|(^|/)\.goreleaser|(^|/)(prometheus|grafana|alertmanager|loki)/|\.(sh|bash|zsh)$"
+    )),
+    ("Infra", re.compile(
+        r"\.(tf|tfvars|hcl|nomad)$|(^|/)Dockerfile[^/]*$|(^|/)docker-compose[^/]*$|(^|/)(fly\.toml|vercel\.json|serverless\.ya?ml)$"
+        r"|(^|/)(k8s|kubernetes|helm|charts|manifests|deploy|infra|infrastructure|cdk|packer|ansible|terraform)/"
+    )),
+    ("Data", re.compile(
+        r"\.(sql|ipynb|prisma)$|(^|/)(migrations?|alembic|dbt|seeds?|dags|etl|pipelines?)/"
+    )),
+    ("AI", re.compile(r"(^|/)(prompts?|evals?|agents?|llm|rag|embeddings?|mcp)/|\.prompt$")),
+]
+
+
+def layer_for(path: str, ai_commit: bool) -> str | None:
+    """Which layer of the spectrum a changed file belongs to, if any."""
+    if SKIP_PATH.search(path):
+        return None
+    name = path.rsplit("/", 1)[-1]
+    ext = "." + name.rsplit(".", 1)[-1].lower() if "." in name else ""
+    for layer, rule in LAYER_RULES:
+        if rule.search(path):
+            return layer
+    if ai_commit and ext in CODE_EXT:
+        return "AI"
+    if ext in FRONTEND_EXT:
+        return "Frontend"
+    if ext in {".ts", ".js", ".mjs"} and re.search(r"(^|/)(components|pages|app|ui|frontend|web|client|views|hooks|routes)/", path):
+        return "Frontend"
+    if ext in BACKEND_EXT:
+        return "Backend"
+    return None
+
+
 def renamed_target(path: str) -> str:
     """`src/{old => new}/a.go` or `old.go => new.go` -> the new path."""
     if "=>" not in path:
@@ -142,42 +196,60 @@ def renamed_target(path: str) -> str:
     return path.split(" => ", 1)[1]
 
 
-def analyze(repo: str, workdir: Path) -> tuple[str, list[tuple[str, str, int]], str | None]:
-    """Returns (repo, [(commit, language, lines added)], error)."""
+def analyze(repo: str, workdir: Path) -> tuple[str, list, list, str | None]:
+    """Returns (repo, [(commit, language, lines)], [(commit, layer, lines)] for recent commits, error)."""
     dest = workdir / repo.replace("/", "__")
+    since = f"--since={LAYER_WINDOW_DAYS} days ago"
     try:
         run("git", "clone", "--bare", "--quiet", f"https://github.com/{repo}.git", str(dest), timeout=CLONE_TIMEOUT)
         author_args = [f"--author={a}" for a in AUTHORS]
         log = run(
-            "git", "log", "HEAD", "--no-merges", "--numstat", "--format=@%H", *author_args,
+            "git", "log", "HEAD", "--no-merges", "--numstat", "--format=@%H %ct", *author_args,
             cwd=dest, timeout=CLONE_TIMEOUT,
         )
+        ai_commits = set(run(
+            "git", "log", "HEAD", "--no-merges", since, "-E", f"-G{AI_PATTERN}", "--format=%H", *author_args,
+            cwd=dest, timeout=CLONE_TIMEOUT,
+        ).split())
     except (subprocess.CalledProcessError, subprocess.TimeoutExpired) as e:
-        return repo, [], (getattr(e, "stderr", "") or str(e)).strip().splitlines()[-1][:200]
+        return repo, [], [], (getattr(e, "stderr", "") or str(e)).strip().splitlines()[-1][:200]
     finally:
         subprocess.run(["rm", "-rf", str(dest)])
 
-    rows, commit, current = [], None, []
+    cutoff = dt.datetime.now().timestamp() - LAYER_WINDOW_DAYS * 86400
+    rows, layer_rows = [], []
+    commit, recent, langs, layers = None, False, [], []
 
     def flush() -> None:
-        if current and sum(n for _, _, n in current) <= MAX_COMMIT_LINES:
-            rows.extend(r for r in current if r[1] not in NOT_CHARTED)
-        current.clear()
+        # bulk imports are dropped from both charts
+        if langs and sum(n for _, _, n in langs) <= MAX_COMMIT_LINES:
+            rows.extend(r for r in langs if r[1] not in NOT_CHARTED)
+        if layers and sum(n for _, _, n in layers) <= MAX_COMMIT_LINES:
+            layer_rows.extend(layers)
+        langs.clear()
+        layers.clear()
 
     for line in log.splitlines():
         if line.startswith("@"):
             flush()
-            commit = line[1:]
+            commit, ts = line[1:].split()
+            recent = int(ts) >= cutoff
             continue
         parts = line.split("\t")
         if len(parts) != 3 or parts[0] == "-":  # blank line or binary file
             continue
-        added = int(parts[0])
-        lang = language_for(renamed_target(parts[2]))
-        if lang and 0 < added <= MAX_FILE_LINES:
-            current.append((commit, lang[0], added))
+        added, path = int(parts[0]), renamed_target(parts[2])
+        if not 0 < added <= MAX_FILE_LINES:
+            continue
+        lang = language_for(path)
+        if lang:
+            langs.append((commit, lang[0], added))
+        if recent:
+            layer = layer_for(path, commit in ai_commits)
+            if layer:
+                layers.append((commit, layer, added))
     flush()
-    return repo, rows, None
+    return repo, rows, layer_rows, None
 
 
 def readable(hex_color: str) -> str:
@@ -279,6 +351,40 @@ def render(stats: dict) -> str:
     return "\n".join(out) + "\n"
 
 
+def score_commits(per_commit: dict[str, list[tuple[str, int]]]) -> tuple[Counter, Counter, Counter, Counter]:
+    """Every commit counts, and bigger commits count more, but only logarithmically
+    (a 1,000-line commit is worth ~10x a 1-line commit, not 1,000x). Each commit's
+    score is split across the keys it touched in proportion to its lines.
+
+    Returns (lines, fractional commits, score, commits touching) per key.
+    """
+    lines, commits, score, touched = Counter(), Counter(), Counter(), Counter()
+    for entries in per_commit.values():
+        size = sum(added for _, added in entries)
+        weight = math.log2(1 + size)
+        touched.update({key for key, _ in entries})
+        for key, added in entries:
+            lines[key] += added
+            commits[key] += added / size
+            score[key] += weight * added / size
+    return lines, commits, score, touched
+
+
+LAYERS = ["Systems Design", "Infra", "DevOps", "Data", "AI", "Backend", "Frontend"]
+
+
+def layer_stats(layer_commits: dict[str, list[tuple[str, int]]]) -> dict:
+    """Each layer's share of recent work, for the spectrum band's brightness."""
+    _, _, score, touched = score_commits(layer_commits)
+    total = sum(score.values()) or 1
+    return {
+        "window_days": LAYER_WINDOW_DAYS,
+        "commits": len(layer_commits),
+        "percent": {name: 100 * score[name] / total for name in LAYERS},
+        "commits_by_layer": {name: touched[name] for name in LAYERS},
+    }
+
+
 def main() -> None:
     ap = argparse.ArgumentParser()
     ap.add_argument("--out", default="dist")
@@ -300,13 +406,14 @@ def main() -> None:
         print("  too large: " + ", ".join(skipped))
 
     per_commit: dict[str, list[tuple[str, int]]] = {}
+    layer_commits: dict[str, list[tuple[str, int]]] = {}
     commit_repo: dict[str, str] = {}
     repo_totals: dict[str, Counter] = {}
     repos_with_commits, failures = set(), []
     with tempfile.TemporaryDirectory() as tmp, ThreadPoolExecutor(args.jobs) as pool:
         futures = [pool.submit(analyze, name, Path(tmp)) for name in names]
         for fut in as_completed(futures):
-            repo, rows, err = fut.result()
+            repo, rows, layer_rows, err = fut.result()
             if err:
                 failures.append(f"{repo}: {err}")
                 continue
@@ -317,19 +424,11 @@ def main() -> None:
                     per_commit.setdefault(commit, []).append((lang, added))
                     repos_with_commits.add(repo)
                     repo_totals.setdefault(repo, Counter())[lang] += added
+            for commit, layer, added in layer_rows:
+                if commit_repo.setdefault(commit, repo) == repo:
+                    layer_commits.setdefault(commit, []).append((layer, added))
 
-    # Score: every commit counts, and bigger commits count more, but only logarithmically
-    # (a 1,000-line commit is worth ~10x a 1-line commit, not 1,000x). Each commit's
-    # score is split across the languages it touched in proportion to its lines.
-    lines, commits, score, touched = Counter(), Counter(), Counter(), Counter()
-    for entries in per_commit.values():
-        size = sum(added for _, added in entries)
-        weight = math.log2(1 + size)
-        touched.update({lang for lang, _ in entries})
-        for lang, added in entries:
-            lines[lang] += added
-            commits[lang] += added / size
-            score[lang] += weight * added / size
+    lines, commits, score, touched = score_commits(per_commit)
     total = sum(lines.values())
     if not total:
         raise SystemExit("no lines found; check AUTHORS and repo access")
@@ -353,6 +452,7 @@ def main() -> None:
             for name, value in score.most_common()
         ],
         "repos_failed": len(failures),
+        "layers": layer_stats(layer_commits),
     }
     out = Path(args.out)
     out.mkdir(parents=True, exist_ok=True)
@@ -365,6 +465,9 @@ def main() -> None:
             f"  {lang['name']:<16} {lang['percent']:5.1f}% {lang['percent_by_commits']:7.1f}% "
             f"{lang['percent_by_lines']:6.1f}%"
         )
+    print(f"layers, last {LAYER_WINDOW_DAYS} days ({stats['layers']['commits']} commits):")
+    for name, pct in stats["layers"]["percent"].items():
+        print(f"  {name:<16} {pct:5.1f}%")
     # repo names stay out of CI output: this repo and its Actions logs are public
     print(f"{len(failures)} repos failed")
     if args.verbose:

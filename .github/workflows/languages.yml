@@ -1,4 +1,4 @@
-name: languages chart
+name: commit charts
 
 on:
   # once a day; it clones every repo, so it runs less often than the stat cards
@@ -31,8 +31,13 @@ jobs:
           gh auth setup-git
           python3 scripts/build_languages.py --out dist
 
+      # the spectrum band in the README intro, with each layer's brightness set by
+      # the last 90 days of commits (from dist/languages.json)
+      - name: build spectrum band
+        run: python3 scripts/build_spectrum.py --data dist/languages.json --out dist/spectrum.svg
+
       # the `output` branch isn't used because the stat card workflow replaces its contents every run
-      - name: push languages chart to the metrics branch
+      - name: push charts to the metrics branch
         uses: crazy-max/ghaction-github-pages@v2.5.0
         with:
           target_branch: metrics

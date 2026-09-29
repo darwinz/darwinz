@@ -1,12 +1,22 @@
 #!/usr/bin/env python3
-"""Render assets/spectrum.svg: the full-spectrum band for the profile README.
+"""Render the full-spectrum band for the profile README.
 
 Each layer is a segment in the Fullspec Studio spectrum colors, with a
 rotating list of tools underneath. Edit LAYERS and re-run:
 
-    /usr/bin/python3 scripts/build_spectrum.py
+    /usr/bin/python3 scripts/build_spectrum.py                  # static, to assets/spectrum.svg
+    python3 scripts/build_spectrum.py --data dist/languages.json --out dist/spectrum.svg
+
+With --data (written by build_languages.py), each segment's brightness shows
+that layer's share of my commits over the last 90 days, and the busiest layer
+pulses. The languages workflow does this daily.
 """
 
+from __future__ import annotations
+
+import argparse
+import json
+import math
 from pathlib import Path
 
 # (layer, band color from fullspecstudio.com, tools shown in rotation)
@@ -41,7 +51,19 @@ def tint(hex_color: str, amount: float = 0.68) -> str:
     return "#" + "".join(f"{round(x + (y - x) * amount):02x}" for x, y in zip(a, b))
 
 
-def build() -> str:
+MIN_OPACITY = 0.3  # quiet layers dim, but never go dark
+
+
+def brightness(share: float, top: float) -> float:
+    """Square root spreads out the small layers so they don't all look equally dim."""
+    return MIN_OPACITY + (1 - MIN_OPACITY) * math.sqrt(share / top) if top else 1.0
+
+
+def build(activity: dict | None = None) -> str:
+    """activity: the "layers" object from languages.json, or None for the static band."""
+    shares = activity["percent"] if activity else {}
+    top = max(shares.values(), default=0)
+    busiest = max(shares, key=shares.get) if top else None
     n_tools = len(LAYERS[0][2])
     assert all(len(t) == n_tools for _, _, t in LAYERS), "every layer needs the same number of tools"
     cycle = n_tools * SLOT
@@ -71,8 +93,13 @@ def build() -> str:
         f"    55% {{ transform: translateX({W + 40}px); }}",
         f"    100% {{ transform: translateX({W + 40}px); }}",
         "  }",
+        "  .busiest { animation: pulse 3.2s ease-in-out infinite; }",
+        "  @keyframes pulse {",
+        "    0%, 100% { opacity: 1; }",
+        "    50% { opacity: 0.35; }",
+        "  }",
         "  @media (prefers-reduced-motion: reduce) {",
-        "    .tool, .sheen { animation: none; }",
+        "    .tool, .sheen, .busiest { animation: none; }",
         "    .tool.first { opacity: 1; }",
         "  }",
         "</style>",
@@ -99,7 +126,17 @@ def build() -> str:
 
     for i, (name, color, tools) in enumerate(LAYERS):
         x = PAD + i * (seg_w + GAP)
-        out.append(f'<rect x="{x:.2f}" y="{band_y}" width="{seg_w:.2f}" height="{band_h}" rx="3" fill="{color}"/>')
+        opacity = brightness(shares.get(name, 0), top) if activity else 1.0
+        if name == busiest:
+            # a soft glow under the busiest layer that breathes in and out
+            out.append(
+                f'<rect class="busiest" x="{x - 3:.2f}" y="{band_y - 3}" width="{seg_w + 6:.2f}" '
+                f'height="{band_h + 6}" rx="6" fill="{color}" opacity="0.45"/>'
+            )
+        out.append(
+            f'<rect x="{x:.2f}" y="{band_y}" width="{seg_w:.2f}" height="{band_h}" rx="3" fill="{color}" '
+            f'fill-opacity="{opacity:.2f}"/>'
+        )
         out.append(
             f'<text x="{x:.2f}" y="{band_y + 38}" fill="{CREAM}" font-family="{SANS}" font-size="12" '
             f'font-weight="600">{name}</text>'
@@ -117,7 +154,12 @@ def build() -> str:
         f'<g clip-path="url(#band)"><rect class="sheen" x="0" y="{band_y}" width="140" height="{band_h}" '
         'fill="url(#shine)"/></g>',
         f'<text x="{PAD}" y="{H - 20}" fill="{MUTED}" font-family="{SANS}" font-size="11">'
-        "19 years across the stack, one layer at a time</text>",
+        + (
+            f"19 years across the stack · brightness shows my last {activity['window_days']} days of commits"
+            if activity
+            else "19 years across the stack, one layer at a time"
+        )
+        + "</text>",
         f'<text x="{W - PAD}" y="{H - 20}" text-anchor="end" fill="{MUTED}" font-family="{SANS}" '
         'font-size="11">fullspecstudio.com</text>',
         "</svg>",
@@ -126,6 +168,13 @@ def build() -> str:
 
 
 if __name__ == "__main__":
-    path = Path(__file__).resolve().parent.parent / "assets" / "spectrum.svg"
-    path.write_text(build())
-    print(f"wrote {path}")
+    ap = argparse.ArgumentParser()
+    ap.add_argument("--data", help="languages.json from build_languages.py")
+    ap.add_argument("--out", default=str(Path(__file__).resolve().parent.parent / "assets" / "spectrum.svg"))
+    args = ap.parse_args()
+    activity = json.loads(Path(args.data).read_text())["layers"] if args.data else None
+    Path(args.out).write_text(build(activity))
+    print(f"wrote {args.out}")
+    if activity:
+        for name, pct in activity["percent"].items():
+            print(f"  {name:<16} {pct:5.1f}%  opacity {brightness(pct, max(activity['percent'].values())):.2f}")
