@@ -103,12 +103,12 @@ I also contribute to open source and join hackathons, and I maintain (and am the
 
 ### Find me around the web
 
-<p>
-  <a href="https://johnsonbrandon.com" target="_blank"><img src="https://img.shields.io/badge/Portfolio-johnsonbrandon.com-24292e?style=for-the-badge&logo=google-chrome&logoColor=white" alt="Personal Website" /></a>
-  &nbsp;
-  <a href="https://fullspecstudio.com/log" target="_blank"><img src="https://img.shields.io/badge/Studio_Log-fullspecstudio.com%2Flog-24292e?style=for-the-badge&logo=rss&logoColor=white" alt="Fullspec Studio Log" /></a>
-  &nbsp;
-  <a href="https://linkedin.com/in/brandonbjohnson" target="_blank"><img src="https://img.shields.io/badge/LinkedIn-Brandon_Johnson-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn" /></a>
+<p align="center">
+  <a href="https://johnsonbrandon.com" target="_blank"><img src="assets/link-site.svg" width="31%" alt="Personal site: johnsonbrandon.com" /></a>
+  &nbsp;&nbsp;&nbsp;
+  <a href="https://fullspecstudio.com" target="_blank"><img src="assets/link-fullspec.svg" width="31%" alt="Fullspec Studio: fullspecstudio.com" /></a>
+  &nbsp;&nbsp;&nbsp;
+  <a href="https://linkedin.com/in/brandonbjohnson" target="_blank"><img src="assets/link-linkedin.svg" width="31%" alt="LinkedIn: in/brandonbjohnson" /></a>
 </p>
 
 <!-- spotify -->
