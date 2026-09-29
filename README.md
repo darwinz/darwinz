@@ -69,7 +69,7 @@ I also contribute to open source and join hackathons, and I maintain (and am the
 
 ---
 
-## Open Source
+## Open source I've helped build
 
 <p align="center">
   <a href="https://github.com/TheAlgorithms/PHP"><img width="45%" src="https://raw.githubusercontent.com/darwinz/darwinz/output/pin-PHP.svg" alt="TheAlgorithms/PHP" /></a>
