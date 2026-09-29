@@ -1,0 +1,41 @@
+name: languages chart
+
+on:
+  # once a day; the indepth scan clones repos, so it runs less often than the stat cards
+  schedule:
+    - cron: "30 9 * * *"
+
+  # allows to manually run the job at any time
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  languages:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+
+    steps:
+      # analyzes the code darwinz actually committed (private repos included) and
+      # commits metrics.languages.svg to the `metrics` branch. The `output` branch
+      # isn't used because the stat card workflow replaces its contents every run.
+      - name: generate languages chart
+        uses: lowlighter/metrics@v3.34
+        with:
+          # classic personal access token with the `repo` scope, saved as a repo secret
+          token: ${{ secrets.METRICS_TOKEN }}
+          user: darwinz
+          filename: metrics.languages.svg
+          committer_branch: metrics
+          committer_message: "Update languages chart"
+          base: ""
+          config_timezone: America/Denver
+          repositories_affiliations: owner, organization_member
+          plugin_languages: yes
+          plugin_languages_indepth: yes
+          plugin_languages_sections: most-used, recently-used
+          plugin_languages_details: lines, percentage
+          plugin_languages_limit: 12
+          plugin_languages_analysis_timeout: 30
+          plugin_languages_analysis_timeout_repositories: 7.5
