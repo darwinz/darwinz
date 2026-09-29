@@ -3,39 +3,49 @@
     <img src="https://media1.giphy.com/media/L0C3eo0XgklO7iqXRC/source.gif" width="100" height="60"/> 
 </a>
 
-Hello World, I'm Brandon Johnson (darwinz) 👋
+### Hello World, I'm Brandon Johnson (darwinz) 👋
 
-I am a senior software engineer at <a href="https://moov.io">Moov Financial</a>.  Moov is a fintech company driving innovative solutions in the payments space.  I also contribute to open source and participate in hackathons, and I'm also the maintainer and the top contributor for a <a href="https://github.com/thealgorithms/php">popular open source repository</a>.
+I run **[Fullspec Studio](https://fullspecstudio.com)**, a small software studio in Utah that builds across the whole spectrum: **infrastructure, interface, and intelligence**. Before the studio, I spent about 19 years building distributed systems, payments infrastructure, and developer platforms at companies like Moov Financial and Cricut.
 
-<!-- <table>
-  <thead>
-    <tr>
-      <th colspan="2">Quick Info</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr><th scope='row'>Role</th><td>Senior Software Engineer - Moov Financial, Inc.</td></tr>
-    <tr><th scope='row'>Organization</th><td>Moov Financial, Moov-io</td></tr>
-    <tr><th scope='row'>Current Stack</th><td>Go, MySQL, OpenAPI, REST APIs, Kafka, Vault, Kubernetes, Docker, Terraform, Packer, Consul, TypeScript, GraphQL, Node, React, Google Cloud Platform, AWS, Traefik, GitHub, GitHub Actions, Prometheus, Loki, Linux, Shell</td></tr>
-    <tr><th scope='row'>Other Areas I Contribute</th><td>Python, Ruby, Elixir, Java, PHP, JavaScript, HCL, VimScript, Objective-C, Lua, Painless, PostgreSQL, MongoDB, Cassandra, Elasticsearch, Neo4J, Redis, Memcached, Rails, Django, Flask, Express, Vue, Spark, Flink, Spring Boot, Magento, Protobuf, gRPC</td></tr>
-  </tbody>
-</table> -->
+The studio runs two lines of work under one roof:
+
+<table>
+<tr>
+<td width="50%" valign="top">
+
+**🛠️ Products**<br/>
+<sub>AI-native software we build and ship ourselves</sub>
+
+- **[Cue](https://fullspecstudio.com/work/cue)**: voice-first prompt engineering for Mac
+- **[JobMap](https://fullspecstudio.com/work/jobmap)**: a job search, run like a pipeline
+- **[Crawlspace](https://fullspecstudio.com/work/crawlspace)**: self-hosted SEO platform with an MCP server
+- **[ImgCrisp](https://fullspecstudio.com/work/imgcrisp)**: honest WordPress image optimization
+- **[AnswerEng](https://answereng.io)**: what AI answer engines say about your brand
+
+</td>
+<td width="50%" valign="top">
+
+**🤝 Consulting**<br/>
+<sub>Senior engineering for startups and small teams</sub>
+
+- **[AI integration](https://fullspecstudio.com/services/ai-integration)**: automate a real workflow
+- **[Project-based](https://fullspecstudio.com/services/project-based)**: own a defined build
+- **[Embedded engineering](https://fullspecstudio.com/services/embedded-engineering)**: join an existing team
+- **[Fractional leadership](https://fullspecstudio.com/services/fractional-leadership)**: lead without a full-time hire
+
+</td>
+</tr>
+</table>
+
+<p>
+  <a href="https://fullspecstudio.com" target="_blank"><img src="https://img.shields.io/badge/Studio-fullspecstudio.com-24292e?style=for-the-badge&logo=google-chrome&logoColor=white" alt="Fullspec Studio" /></a>
+  &nbsp;
+  <a href="https://fullspecstudio.com/discuss" target="_blank"><img src="https://img.shields.io/badge/Discuss_a_project-→-24292e?style=for-the-badge" alt="Discuss a project" /></a>
+</p>
+
+I also contribute to open source and join hackathons, and I maintain (and am the top contributor to) <a href="https://github.com/thealgorithms/php">TheAlgorithms/PHP</a>.
 
 ---
-
-<!--<table style="margin-left: auto; margin-right: auto;">
-  <thead>
-    <tr>
-      <th colspan="2">Official Maintainer for the Following Public Repositories</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr><td><a href="https://github.com/moov-io/irs" target="_blank">Moov-io / irs</a></td><td>IRS implemented a reader, writer, and HTTP server for IRS electronic Filing Information Returns Electronically (FIRE).
-    Our tools and library operate at higher levels (JSON) which makes it easier for developers to leverage over the raw bytes (ASCII).</td></tr>
-    <tr><td><a href="https://github.com/moov-io/1120x" target="_blank">Moov-io / 1120x</a></td><td>1120x is a subset of moov.io IRS project. It'll support Modernized e-File payload production for the 1120 family forms for tax year 2020 and beyond.</td></tr>
-    <tr><td><a href="https://github.com/thealgorithms/php" target="_blank">TheAlgorithms / PHP</a></td><td>The Algorithms projects attempt to help software engineers to know and understand the algorithms available in various software programming languages.</td></tr>
-  </tbody>
-</table>-->
 
 ## GitHub Stats 
 
