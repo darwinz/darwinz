@@ -18,6 +18,7 @@ from __future__ import annotations
 import argparse
 import datetime as dt
 import json
+import math
 import re
 import subprocess
 import tempfile
@@ -38,6 +39,11 @@ AUTHORS = [
 MAX_REPO_KB = 1_000_000  # skip repos over ~1 GB
 CLONE_TIMEOUT = 300
 MAX_FILE_LINES = 5_000  # a single file change bigger than this is almost always generated or imported
+MAX_COMMIT_LINES = 10_000  # nobody hand-writes this much in one commit; it's a framework or site import
+
+# Markup, styling, and build files: still counted toward MAX_COMMIT_LINES, but left off
+# the chart, which is about programming languages. HCL stays in as infrastructure code.
+NOT_CHARTED = {"HTML", "CSS", "SCSS", "Makefile", "Dockerfile"}
 
 # extension (or exact file name) -> (language, GitHub linguist color)
 LANGUAGES = {
@@ -94,6 +100,9 @@ SKIP_PATH = re.compile(
     r"(^|/)(vendor|node_modules|dist|build|out|\.next|coverage|third_party|__generated__|generated)/"
     # editor installs committed with dotfiles: language servers, plugin managers, backups
     r"|(^|/)(lsp_servers|mason|plugged)/|(^|/)pack/[^/]+/(start|opt)/|packer_compiled\.lua$|\.bak/"
+    # frameworks and CMSs committed alongside the code written on top of them
+    r"|(^|/)(wp-admin|wp-includes)/|(^|/)wp-content/(plugins|themes/twenty\w*)/|(^|/)app/code/(core|community)/"
+    r"|(^|/)(lib|js|skin)/(mage|varien|prototype|scriptaculous|extjs)/|(^|/)(site-packages|venv|\.venv|env/lib)/"
     r"|\.min\.(js|css)$|\.(pb|gen|generated)\.\w+$|_pb2\.py$|\.d\.ts$|(^|/)package-lock\.json$"
 )
 
@@ -148,9 +157,16 @@ def analyze(repo: str, workdir: Path) -> tuple[str, list[tuple[str, str, int]], 
     finally:
         subprocess.run(["rm", "-rf", str(dest)])
 
-    rows, commit = [], None
+    rows, commit, current = [], None, []
+
+    def flush() -> None:
+        if current and sum(n for _, _, n in current) <= MAX_COMMIT_LINES:
+            rows.extend(r for r in current if r[1] not in NOT_CHARTED)
+        current.clear()
+
     for line in log.splitlines():
         if line.startswith("@"):
+            flush()
             commit = line[1:]
             continue
         parts = line.split("\t")
@@ -159,7 +175,8 @@ def analyze(repo: str, workdir: Path) -> tuple[str, list[tuple[str, str, int]], 
         added = int(parts[0])
         lang = language_for(renamed_target(parts[2]))
         if lang and 0 < added <= MAX_FILE_LINES:
-            rows.append((commit, lang[0], added))
+            current.append((commit, lang[0], added))
+    flush()
     return repo, rows, None
 
 
@@ -178,19 +195,34 @@ def compact(n: int) -> str:
 
 
 def render(stats: dict) -> str:
-    W, PAD, TOP = 840, 24, 8
+    W, PAD, TOP = 840, 24, 12
     colors = {name: color for name, color in LANGUAGES.values()}
-    total = stats["total_lines"]
+    total = 100.0
     top = stats["languages"][:TOP]
-    other = total - sum(l["lines"] for l in top)
+    rest = stats["languages"][TOP:]
+    other = total - sum(l["percent"] for l in top)
     cols, row_h = 4, 44
     rows = -(-len(top) // cols)
-    H = 100 + rows * row_h + 34
+
+    # everything past the top 12, in order, wrapped to at most two lines of ~115 monospace chars
+    also_lines, line = [], "Also:"
+    for lang in rest:
+        piece = f" {lang['name']} ·"
+        if len(line) + len(piece) > 115:
+            also_lines.append(line)
+            line = ""
+            if len(also_lines) == 2:
+                break
+        line += piece
+    else:
+        also_lines.append(line)
+    also_lines = [l.rstrip(" ·").strip() for l in also_lines if l.strip()]
+    H = 100 + rows * row_h + 16 * len(also_lines) + (8 if also_lines else 0) + 34
     band_y, band_h, gap = 58, 12, 3
     inner = W - 2 * PAD
 
-    segs = [(l["name"], l["lines"], readable(colors[l["name"]])) for l in top]
-    if other > 0:
+    segs = [(l["name"], l["percent"], readable(colors[l["name"]])) for l in top]
+    if other > 0.05:
         segs.append(("Other", other, "#4b5063"))
     usable = inner - gap * (len(segs) - 1)
 
@@ -205,13 +237,13 @@ def render(stats: dict) -> str:
         f'<text x="{PAD}" y="38" fill="{CREAM}" font-family="{SANS}" font-size="12" font-weight="600" '
         "letter-spacing=\"2.4\">LANGUAGES I'VE WRITTEN</text>",
         f'<text x="{W - PAD}" y="38" text-anchor="end" fill="{MUTED}" font-family="{SANS}" font-size="12" '
-        'font-style="italic">lines added in my commits · every repo, all time</text>',
+        'font-style="italic">weighted by commits and lines · every repo, all time</text>',
         f'<clipPath id="band"><rect x="{PAD}" y="{band_y}" width="{inner}" height="{band_h}" rx="3"/></clipPath>',
         '<g clip-path="url(#band)">',
     ]
     x = PAD
-    for i, (_, lines, color) in enumerate(segs):
-        w = max(usable * lines / total, 2)
+    for i, (_, share, color) in enumerate(segs):
+        w = max(usable * share / total, 2)
         if i == len(segs) - 1:
             w = PAD + inner - x
         out.append(f'<rect x="{x:.2f}" y="{band_y}" width="{w:.2f}" height="{band_h}" fill="{color}"/>')
@@ -228,8 +260,14 @@ def render(stats: dict) -> str:
             f'<text x="{cx + 16}" y="{cy}" fill="{CREAM}" font-family="{SANS}" font-size="13" '
             f'font-weight="600">{lang["name"]}</text>',
             f'<text x="{cx + 16}" y="{cy + 18}" fill="{MUTED}" font-family="{MONO}" font-size="11">'
-            f'{lang["percent"]:.1f}% · {compact(lang["lines"])} lines</text>',
+            f'{lang["percent"]:.1f}% · {lang["commits"]:,} commits</text>',
         ]
+
+    also_y = band_y + 42 + rows * row_h
+    for i, text in enumerate(also_lines):
+        out.append(
+            f'<text x="{PAD}" y="{also_y + i * 16}" fill="{MUTED}" font-family="{MONO}" font-size="11">{text}</text>'
+        )
 
     out += [
         f'<text x="{PAD}" y="{H - 20}" fill="{MUTED}" font-family="{SANS}" font-size="11">'
@@ -280,13 +318,22 @@ def main() -> None:
                     repos_with_commits.add(repo)
                     repo_totals.setdefault(repo, Counter())[lang] += added
 
-    totals = Counter()
+    # Score: every commit counts, and bigger commits count more, but only logarithmically
+    # (a 1,000-line commit is worth ~10x a 1-line commit, not 1,000x). Each commit's
+    # score is split across the languages it touched in proportion to its lines.
+    lines, commits, score, touched = Counter(), Counter(), Counter(), Counter()
     for entries in per_commit.values():
+        size = sum(added for _, added in entries)
+        weight = math.log2(1 + size)
+        touched.update({lang for lang, _ in entries})
         for lang, added in entries:
-            totals[lang] += added
-    total = sum(totals.values())
+            lines[lang] += added
+            commits[lang] += added / size
+            score[lang] += weight * added / size
+    total = sum(lines.values())
     if not total:
         raise SystemExit("no lines found; check AUTHORS and repo access")
+    total_score, total_commits = sum(score.values()), sum(commits.values())
 
     stats = {
         "updated": dt.date.today().isoformat(),
@@ -295,7 +342,15 @@ def main() -> None:
         "commits": len(per_commit),
         "total_lines": total,
         "languages": [
-            {"name": name, "lines": lines, "percent": 100 * lines / total} for name, lines in totals.most_common()
+            {
+                "name": name,
+                "percent": 100 * value / total_score,
+                "lines": lines[name],
+                "commits": touched[name],
+                "percent_by_lines": 100 * lines[name] / total,
+                "percent_by_commits": 100 * commits[name] / total_commits,
+            }
+            for name, value in score.most_common()
         ],
         "repos_failed": len(failures),
     }
@@ -304,8 +359,12 @@ def main() -> None:
     (out / "languages.json").write_text(json.dumps(stats, indent=2) + "\n")
     (out / "languages.svg").write_text(render(stats))
     print(f"{stats['commits']} commits in {stats['repos_with_commits']} repos, {total:,} lines")
+    print(f"  {'language':<16} {'score':>6} {'commits':>8} {'lines':>7}")
     for lang in stats["languages"][:12]:
-        print(f"  {lang['name']:<16} {lang['percent']:5.1f}%  {lang['lines']:>10,}")
+        print(
+            f"  {lang['name']:<16} {lang['percent']:5.1f}% {lang['percent_by_commits']:7.1f}% "
+            f"{lang['percent_by_lines']:6.1f}%"
+        )
     # repo names stay out of CI output: this repo and its Actions logs are public
     print(f"{len(failures)} repos failed")
     if args.verbose:
