@@ -66,7 +66,7 @@ jobs:
           # open source repo cards
           for repo in TheAlgorithms/PHP moov-io/ach moovfinancial/moov-go Fullspec-Studio/aeo-engine; do
             curl --fail --silent --show-error --location --retry 5 --retry-all-errors \
-              "https://github-readme-stats-phi-lovat.vercel.app/api/pin?username=${repo%%/*}&repo=${repo##*/}&show_owner=true&description_lines_count=2&theme=tokyonight&card_width=495&custom_title=By%20the%20Numbers&cache_seconds=86400" \
+              "https://github-readme-stats-phi-lovat.vercel.app/api/pin?username=${repo%%/*}&repo=${repo##*/}&show_owner=true&description_lines_count=2&theme=tokyonight&cache_seconds=86400" \
               -o "dist/pin-${repo##*/}.svg"
           done
       - name: push github-contribution-grid-snake.svg to the output branch
