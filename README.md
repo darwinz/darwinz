@@ -47,19 +47,12 @@ I also contribute to open source and join hackathons, and I maintain (and am the
 
 ---
 
-## GitHub Stats 
+## By the numbers
 
 <p align="center">
-  <img
-    width="48%"
-    src="https://raw.githubusercontent.com/darwinz/darwinz/output/github-stats.svg"
-    alt="GitHub Stats"
-  />
-  <img
-    width="49%"
-    src="https://raw.githubusercontent.com/darwinz/darwinz/output/github-streak.svg"
-    alt="GitHub Streak"
-  />
+  <img width="45%" src="https://raw.githubusercontent.com/darwinz/darwinz/output/github-stats.svg" alt="GitHub Stats" />
+  &nbsp;&nbsp;&nbsp;
+  <img width="45%" src="https://raw.githubusercontent.com/darwinz/darwinz/output/github-streak.svg" alt="GitHub Streak" />
 </p>
 
 <!-- vercel github profile trophy -->
