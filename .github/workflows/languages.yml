@@ -32,6 +32,7 @@ jobs:
           base: ""
           config_timezone: America/Denver
           repositories: 600
+          repositories_batch: 20
           repositories_affiliations: owner, organization_member
           commits_authoring: darwinz, Brandon Johnson, 13704128+darwinz@users.noreply.github.com, brandon@moov.io, brandon.johnson@moov.io
           plugin_languages: yes
