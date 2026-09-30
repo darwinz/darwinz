@@ -104,23 +104,27 @@ def build(title: str, address: str, icon) -> str:
 
 
 def build_more_bar() -> str:
-    """The clickable bar for the "A little more about me" section: a quiet one-line card,
-    so it reads as part of the page rather than a call to action. The README puts it in a
-    <picture> inside <summary>, because GitHub wraps a bare <img> in a link to the image,
-    which would open the SVG instead of expanding the section."""
+    """The clickable bar for the "A little more about me" section: a thin black band.
+    The README puts it in a <picture> inside <summary>, because GitHub wraps a bare
+    <img> in a link to the image, which would open the SVG instead of expanding it."""
     bw, bh = 840, 44
+    cy = bh / 2
+    coral = "#c06548"
     return "\n".join(
         [
             f'<svg xmlns="http://www.w3.org/2000/svg" width="{bw}" height="{bh}" viewBox="0 0 {bw} {bh}" '
             'role="img" aria-label="A little more about me: click to expand">',
             "<title>A little more about me</title>",
-            f'<rect x="0.5" y="0.5" width="{bw - 1}" height="{bh - 1}" rx="4.5" fill="{BG}" stroke="{BORDER}"/>',
-            f'<text x="20" y="{bh / 2 + 4}" fill="{CREAM}" font-family="{SANS}" font-size="11" '
-            'font-weight="600" letter-spacing="2">A LITTLE MORE ABOUT ME</text>',
-            f'<text x="{bw - 44}" y="{bh / 2 + 4}" text-anchor="end" fill="{MUTED}" font-family="{SANS}" '
-            'font-size="12">fun facts, languages, and links</text>',
-            f'<path d="M{bw - 30} {bh / 2 - 3}l5 5 5-5" fill="none" stroke="{MUTED}" '
-            'stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>',
+            f'<rect x="0.5" y="0.5" width="{bw - 1}" height="{bh - 1}" rx="4.5" fill="#000" stroke="#30363d"/>',
+            f'<text x="18" y="{cy + 4.5}" fill="#fff" font-family="{SANS}" font-size="13" font-weight="600">'
+            "A little more about me</text>",
+            f'<text x="190" y="{cy + 4}" fill="{MUTED}" font-family="{MONO}" font-size="11">'
+            "past companies · favorite languages · languages chart · where to find me</text>",
+            f'<text x="{bw - 44}" y="{cy + 4}" text-anchor="end" fill="{MUTED}" font-family="{SANS}" '
+            'font-size="11">click to expand</text>',
+            f'<circle cx="{bw - 24}" cy="{cy}" r="10" fill="none" stroke="{coral}" stroke-width="1.4"/>',
+            f'<path d="M{bw - 28} {cy - 1.5}l4 4 4-4" fill="none" stroke="{coral}" stroke-width="1.6" '
+            'stroke-linecap="round" stroke-linejoin="round"/>',
             "</svg>",
             "",
         ]
