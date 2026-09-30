@@ -82,8 +82,11 @@ I also contribute to open source and join hackathons, and I maintain (and am the
 
 ---
 
+**Fun fact:** I've worked on data pipelines that ingested terabytes a day, with an AWS bill averaging well over $1 million a month. There's more where that came from 👇
+
 <details>
-  <summary> A little more about me </summary>
+  <!-- <picture> keeps GitHub from wrapping the image in a link, so clicking it expands the section -->
+  <summary><picture><source media="(prefers-color-scheme: dark)" srcset="assets/more-about-me.svg"><source media="(prefers-color-scheme: light)" srcset="assets/more-about-me.svg"><img src="assets/more-about-me.svg" width="96%" alt="A little more about me: click to expand" /></picture></summary>
   <br/>
 
   <p> Some fun facts </p>

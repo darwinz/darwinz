@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
-"""Render the "Find me around the web" link cards into assets/link-*.svg.
+"""Render the "Find me around the web" link cards into assets/link-*.svg, plus the
+clickable bar for "A little more about me" (assets/more-about-me.svg).
 
 Each card is a dark tile (matching the stat cards) with an icon, a name,
 and the address. Edit CARDS and re-run:
@@ -102,7 +103,43 @@ def build(title: str, address: str, icon) -> str:
     )
 
 
+def build_more_bar() -> str:
+    """The clickable bar for the "A little more about me" section. The README puts it in a
+    <picture> inside <summary>, because GitHub wraps a bare <img> in a link to the image,
+    which would open the SVG instead of expanding the section."""
+    bw, bh = 840, 76
+    coral = "#c06548"
+    mark = icon_fullspec(18, (bh - ICON) / 2).replace(f'fill="{PAPER}"', 'fill="#232536"')
+    return "\n".join(
+        [
+            f'<svg xmlns="http://www.w3.org/2000/svg" width="{bw}" height="{bh}" viewBox="0 0 {bw} {bh}" '
+            'role="img" aria-label="A little more about me: click to expand">',
+            "<title>A little more about me</title>",
+            "<style>",
+            "  .bob { animation: bob 2.4s ease-in-out infinite; }",
+            "  @keyframes bob { 0%, 100% { transform: translateY(-2px); } 50% { transform: translateY(3px); } }",
+            "  @media (prefers-reduced-motion: reduce) { .bob { animation: none; } }",
+            "</style>",
+            f'<rect x="0.5" y="0.5" width="{bw - 1}" height="{bh - 1}" rx="4.5" fill="{BG}" stroke="{BORDER}"/>',
+            mark,
+            f'<text x="{18 + ICON + 18}" y="{bh / 2 - 4}" fill="{CREAM}" font-family="{SANS}" font-size="12" '
+            'font-weight="600" letter-spacing="2.4">A LITTLE MORE ABOUT ME</text>',
+            f'<text x="{18 + ICON + 18}" y="{bh / 2 + 16}" fill="{MUTED}" font-family="{MONO}" font-size="12">'
+            "past companies · favorite languages · languages chart · where to find me</text>",
+            f'<text x="{bw - 70}" y="{bh / 2 + 4}" text-anchor="end" fill="{MUTED}" font-family="{SANS}" '
+            'font-size="12">click to expand</text>',
+            f'<circle cx="{bw - 38}" cy="{bh / 2}" r="16" fill="none" stroke="{coral}" stroke-width="1.5"/>',
+            f'<g class="bob"><path d="M{bw - 44} {bh / 2 - 3}l6 6 6-6" fill="none" stroke="{coral}" '
+            'stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></g>',
+            "</svg>",
+            "",
+        ]
+    )
+
+
 if __name__ == "__main__":
     for filename, title, address, icon in CARDS:
         (ASSETS / filename).write_text(build(title, address, icon))
         print(f"wrote assets/{filename}")
+    (ASSETS / "more-about-me.svg").write_text(build_more_bar())
+    print("wrote assets/more-about-me.svg")

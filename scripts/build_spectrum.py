@@ -33,8 +33,8 @@ LAYERS = [
 W, H = 840, 172
 PAD = 24
 GAP = 4
-SLOT = 2.0  # seconds each tool is shown
-STAGGER = 0.25  # seconds between neighboring layers, so changes ripple left to right
+SLOT = 3.5  # seconds each tool is shown
+STAGGER = 0.4  # seconds between neighboring layers, so changes ripple left to right
 
 BG = "#1a1b27"  # matches the tokyonight stat cards
 BORDER = "#e4e2e2"
@@ -66,8 +66,9 @@ def bar_height(share: float, top: float, tallest: float) -> float:
     return MIN_BAR + (tallest - MIN_BAR) * share / top if top else tallest
 
 
-def build(activity: dict | None = None) -> str:
+def build(activity: dict | None = None, updated: str | None = None) -> str:
     """activity: the "layers" object from languages.json, or None for the static band.
+    updated: the scan date from languages.json, shown in the footer like the languages chart.
 
     With activity, the band becomes the Fullspec mark: bottom-aligned bars whose heights
     show each layer's share of recent commits, over faint full-height tracks.
@@ -190,7 +191,7 @@ def build(activity: dict | None = None) -> str:
         )
         + "</text>",
         f'<text x="{W - PAD}" y="{height - 20}" text-anchor="end" fill="{MUTED}" font-family="{SANS}" '
-        'font-size="11">fullspecstudio.com</text>',
+        f'font-size="11">{f"updated {updated} · " if updated else ""}fullspecstudio.com</text>',
         "</svg>",
     ]
     return "\n".join(out) + "\n"
@@ -201,8 +202,9 @@ if __name__ == "__main__":
     ap.add_argument("--data", help="languages.json from build_languages.py")
     ap.add_argument("--out", default=str(Path(__file__).resolve().parent.parent / "assets" / "spectrum.svg"))
     args = ap.parse_args()
-    activity = json.loads(Path(args.data).read_text())["layers"] if args.data else None
-    Path(args.out).write_text(build(activity))
+    data = json.loads(Path(args.data).read_text()) if args.data else {}
+    activity = data.get("layers")
+    Path(args.out).write_text(build(activity, data.get("updated")))
     print(f"wrote {args.out}")
     if activity:
         for name, pct in activity["percent"].items():
