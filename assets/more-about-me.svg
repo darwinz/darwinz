@@ -1,15 +1,7 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="840" height="76" viewBox="0 0 840 76" role="img" aria-label="A little more about me: click to expand">
+<svg xmlns="http://www.w3.org/2000/svg" width="840" height="44" viewBox="0 0 840 44" role="img" aria-label="A little more about me: click to expand">
 <title>A little more about me</title>
-<style>
-  .bob { animation: bob 2.4s ease-in-out infinite; }
-  @keyframes bob { 0%, 100% { transform: translateY(-2px); } 50% { transform: translateY(3px); } }
-  @media (prefers-reduced-motion: reduce) { .bob { animation: none; } }
-</style>
-<rect x="0.5" y="0.5" width="839" height="75" rx="4.5" fill="#1a1b27" stroke="#e4e2e2"/>
-<rect x="18" y="12.0" width="52" height="52" rx="11" fill="#232536"/><rect x="26.12" y="30.69" width="4.06" height="20.31" rx="0.81" fill="#2e3a85"/><rect x="31.41" y="34.75" width="4.06" height="16.25" rx="0.81" fill="#1f6a66"/><rect x="36.69" y="36.38" width="4.06" height="14.62" rx="0.81" fill="#5f7a28"/><rect x="41.97" y="32.31" width="4.06" height="18.69" rx="0.81" fill="#b3801f"/><rect x="47.25" y="25.00" width="4.06" height="26.00" rx="0.81" fill="#b25a3e"/><rect x="52.53" y="34.75" width="4.06" height="16.25" rx="0.81" fill="#7e402c"/><rect x="57.81" y="38.00" width="4.06" height="13.00" rx="0.81" fill="#4a1d31"/>
-<text x="88" y="34.0" fill="#f5ecd9" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" font-weight="600" letter-spacing="2.4">A LITTLE MORE ABOUT ME</text>
-<text x="88" y="54.0" fill="#9aa0b8" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="12">past companies · favorite languages · languages chart · where to find me</text>
-<text x="770" y="42.0" text-anchor="end" fill="#9aa0b8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12">click to expand</text>
-<circle cx="802" cy="38.0" r="16" fill="none" stroke="#c06548" stroke-width="1.5"/>
-<g class="bob"><path d="M796 35.0l6 6 6-6" fill="none" stroke="#c06548" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></g>
+<rect x="0.5" y="0.5" width="839" height="43" rx="4.5" fill="#1a1b27" stroke="#e4e2e2"/>
+<text x="20" y="26.0" fill="#f5ecd9" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="11" font-weight="600" letter-spacing="2">A LITTLE MORE ABOUT ME</text>
+<text x="796" y="26.0" text-anchor="end" fill="#9aa0b8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12">fun facts, languages, and links</text>
+<path d="M810 19.0l5 5 5-5" fill="none" stroke="#9aa0b8" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
 </svg>

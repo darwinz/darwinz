@@ -104,33 +104,23 @@ def build(title: str, address: str, icon) -> str:
 
 
 def build_more_bar() -> str:
-    """The clickable bar for the "A little more about me" section. The README puts it in a
+    """The clickable bar for the "A little more about me" section: a quiet one-line card,
+    so it reads as part of the page rather than a call to action. The README puts it in a
     <picture> inside <summary>, because GitHub wraps a bare <img> in a link to the image,
     which would open the SVG instead of expanding the section."""
-    bw, bh = 840, 76
-    coral = "#c06548"
-    mark = icon_fullspec(18, (bh - ICON) / 2).replace(f'fill="{PAPER}"', 'fill="#232536"')
+    bw, bh = 840, 44
     return "\n".join(
         [
             f'<svg xmlns="http://www.w3.org/2000/svg" width="{bw}" height="{bh}" viewBox="0 0 {bw} {bh}" '
             'role="img" aria-label="A little more about me: click to expand">',
             "<title>A little more about me</title>",
-            "<style>",
-            "  .bob { animation: bob 2.4s ease-in-out infinite; }",
-            "  @keyframes bob { 0%, 100% { transform: translateY(-2px); } 50% { transform: translateY(3px); } }",
-            "  @media (prefers-reduced-motion: reduce) { .bob { animation: none; } }",
-            "</style>",
             f'<rect x="0.5" y="0.5" width="{bw - 1}" height="{bh - 1}" rx="4.5" fill="{BG}" stroke="{BORDER}"/>',
-            mark,
-            f'<text x="{18 + ICON + 18}" y="{bh / 2 - 4}" fill="{CREAM}" font-family="{SANS}" font-size="12" '
-            'font-weight="600" letter-spacing="2.4">A LITTLE MORE ABOUT ME</text>',
-            f'<text x="{18 + ICON + 18}" y="{bh / 2 + 16}" fill="{MUTED}" font-family="{MONO}" font-size="12">'
-            "past companies · favorite languages · languages chart · where to find me</text>",
-            f'<text x="{bw - 70}" y="{bh / 2 + 4}" text-anchor="end" fill="{MUTED}" font-family="{SANS}" '
-            'font-size="12">click to expand</text>',
-            f'<circle cx="{bw - 38}" cy="{bh / 2}" r="16" fill="none" stroke="{coral}" stroke-width="1.5"/>',
-            f'<g class="bob"><path d="M{bw - 44} {bh / 2 - 3}l6 6 6-6" fill="none" stroke="{coral}" '
-            'stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></g>',
+            f'<text x="20" y="{bh / 2 + 4}" fill="{CREAM}" font-family="{SANS}" font-size="11" '
+            'font-weight="600" letter-spacing="2">A LITTLE MORE ABOUT ME</text>',
+            f'<text x="{bw - 44}" y="{bh / 2 + 4}" text-anchor="end" fill="{MUTED}" font-family="{SANS}" '
+            'font-size="12">fun facts, languages, and links</text>',
+            f'<path d="M{bw - 30} {bh / 2 - 3}l5 5 5-5" fill="none" stroke="{MUTED}" '
+            'stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>',
             "</svg>",
             "",
         ]
