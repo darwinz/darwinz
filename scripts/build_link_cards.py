@@ -104,7 +104,7 @@ def build(title: str, address: str, icon) -> str:
 
 
 def build_more_bar() -> str:
-    """The clickable bar for the "A little more about me" section: a thin black band.
+    """The clickable bar for the "A little more about me" section: a thin band in the card style.
     The README puts it in a <picture> inside <summary>, because GitHub wraps a bare
     <img> in a link to the image, which would open the SVG instead of expanding it."""
     bw, bh = 840, 44
@@ -115,7 +115,7 @@ def build_more_bar() -> str:
             f'<svg xmlns="http://www.w3.org/2000/svg" width="{bw}" height="{bh}" viewBox="0 0 {bw} {bh}" '
             'role="img" aria-label="A little more about me: click to expand">',
             "<title>A little more about me</title>",
-            f'<rect x="0.5" y="0.5" width="{bw - 1}" height="{bh - 1}" rx="4.5" fill="#000" stroke="#30363d"/>',
+            f'<rect x="0.5" y="0.5" width="{bw - 1}" height="{bh - 1}" rx="4.5" fill="{BG}" stroke="{BORDER}"/>',
             f'<text x="18" y="{cy + 4.5}" fill="#fff" font-family="{SANS}" font-size="13" font-weight="600">'
             "A little more about me</text>",
             f'<text x="190" y="{cy + 4}" fill="{MUTED}" font-family="{MONO}" font-size="11">'
