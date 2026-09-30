@@ -61,6 +61,11 @@ I also contribute to open source and join hackathons, and I maintain (and am the
 
 ---
 
+<!-- platane/snk gif generated to 'output' branch -->
+![darwinz snake gif](https://raw.githubusercontent.com/darwinz/darwinz/output/github-snake-dark.svg)
+
+---
+
 ## Open source I've helped build
 
 <p align="center">
@@ -75,25 +80,17 @@ I also contribute to open source and join hackathons, and I maintain (and am the
   <a href="https://github.com/Fullspec-Studio/aeo-engine"><img width="45%" src="https://raw.githubusercontent.com/darwinz/darwinz/output/pin-aeo-engine.svg" alt="Fullspec-Studio/aeo-engine" /></a>
 </p>
 
-----
-
-<!-- platane/snk gif generated to 'output' branch -->
-![darwinz snake gif](https://raw.githubusercontent.com/darwinz/darwinz/output/github-snake-dark.svg)
-
 ---
 
-<details>
-  <!-- <picture> keeps GitHub from wrapping the image in a link, so clicking it expands the section -->
-  <summary><picture><source media="(prefers-color-scheme: dark)" srcset="assets/more-about-me.svg"><source media="(prefers-color-scheme: light)" srcset="assets/more-about-me.svg"><img src="assets/more-about-me.svg" width="96%" alt="A little more about me: click to expand" /></picture></summary>
-  <br/>
+## A little more about me
 
-  <p> Some fun facts </p>
-  <ul>
-    <li>Fullspec Studio isn't my first company. I've founded or co-founded a few others, including a SaaS platform for real estate developers, an app that let athletes compare their performance with pro athletes, and a dev consulting agency</li>
-    <li>The "full spectrum" in Fullspec is literal: over about 19 years I've been the specialist on each layer of the stack in turn (infrastructure, data, backend, frontend), going deep on one at a time</li>
-    <li>My favorite programming language is Go, followed by Python, TypeScript (and Node.js), Lua, Swift, Dart, Ruby, Elixir, Rust, Java, and then PHP</li>
-    <li>I've worked on some fairly large-scale systems, including data pipelines ingesting TBs of data every day (with an AWS bill averaging well over $1 million per month), an e-commerce site whose database averaged 12,000 queries per second under normal load, and a payments platform handling more than 5,000 requests per second</li>
-  </ul>
+<p> Some fun facts </p>
+<ul>
+  <li>Fullspec Studio isn't my first company. I've founded or co-founded a few others, including a SaaS platform for real estate developers, an app that let athletes compare their performance with pro athletes, and a dev consulting agency</li>
+  <li>The "full spectrum" in Fullspec is literal: over about 19 years I've been the specialist on each layer of the stack in turn (infrastructure, data, backend, frontend), going deep on one at a time</li>
+  <li>My favorite programming language is Go, followed by Python, TypeScript (and Node.js), Lua, Swift, Dart, Ruby, Elixir, Rust, Java, and then PHP</li>
+  <li>I've worked on some fairly large-scale systems, including data pipelines ingesting TBs of data every day (with an AWS bill averaging well over $1 million per month), an e-commerce site whose database averaged 12,000 queries per second under normal load, and a payments platform handling more than 5,000 requests per second</li>
+</ul>
 
 <!-- generated daily by .github/workflows/languages.yml into the metrics branch -->
 <p align="center">
@@ -102,7 +99,7 @@ I also contribute to open source and join hackathons, and I maintain (and am the
 
 ---
 
-### Find me around the web
+## Find me around the web
 
 <p align="center">
   <a href="https://johnsonbrandon.com" target="_blank"><img src="assets/link-site.svg" width="31%" alt="Personal site: johnsonbrandon.com" /></a>
@@ -115,6 +112,5 @@ I also contribute to open source and join hackathons, and I maintain (and am the
 <!-- spotify -->
 <!--  [![spotify-github-profile](https://spotify-github-profile.vercel.app/api/view?uid=121686652&cover_image=true)](https://github.com/darwinz) -->
 
-</details>
 
 <img src="https://github-tracker-liart.vercel.app/api/pixel?source=darwinz/darwinz" width="1" height="1" />
