@@ -7,9 +7,9 @@ rotating list of tools underneath. Edit LAYERS and re-run:
     /usr/bin/python3 scripts/build_spectrum.py                  # static, to assets/spectrum.svg
     python3 scripts/build_spectrum.py --data dist/languages.json --out dist/spectrum.svg
 
-With --data (written by build_languages.py), each segment's brightness shows
-that layer's share of my commits over the last 90 days, and the busiest layer
-pulses. The languages workflow does this daily.
+With --data (written by build_languages.py), each segment shows
+that layer's share of my commits over the last 90 days as a bar height, and
+the busiest layer pulses. The languages workflow does this daily.
 """
 
 from __future__ import annotations
@@ -51,16 +51,27 @@ def tint(hex_color: str, amount: float = 0.68) -> str:
     return "#" + "".join(f"{round(x + (y - x) * amount):02x}" for x, y in zip(a, b))
 
 
-MIN_OPACITY = 0.3  # quiet layers dim, but never go dark
+MIN_BAR = 3  # px; quiet layers shrink, but never disappear
 
 
-def brightness(share: float, top: float) -> float:
-    """Square root spreads out the small layers so they don't all look equally dim."""
-    return MIN_OPACITY + (1 - MIN_OPACITY) * math.sqrt(share / top) if top else 1.0
+def lift(hex_color: str) -> str:
+    """Lighten the darkest brand colors (Frontend's plum, Systems Design's indigo) so
+    their bars stand out from their tracks on the dark card."""
+    r, g, b = (int(hex_color[i : i + 2], 16) for i in (1, 3, 5))
+    return tint(hex_color, 0.3) if 0.2126 * r + 0.7152 * g + 0.0722 * b < 70 else hex_color
+
+
+def bar_height(share: float, top: float, tallest: float) -> float:
+    """Linear in each layer's share, scaled so the busiest layer is the tallest bar."""
+    return MIN_BAR + (tallest - MIN_BAR) * share / top if top else tallest
 
 
 def build(activity: dict | None = None) -> str:
-    """activity: the "layers" object from languages.json, or None for the static band."""
+    """activity: the "layers" object from languages.json, or None for the static band.
+
+    With activity, the band becomes the Fullspec mark: bottom-aligned bars whose heights
+    show each layer's share of recent commits, over faint full-height tracks.
+    """
     shares = activity["percent"] if activity else {}
     top = max(shares.values(), default=0)
     busiest = max(shares, key=shares.get) if top else None
@@ -69,13 +80,30 @@ def build(activity: dict | None = None) -> str:
     cycle = n_tools * SLOT
     show = 100 / n_tools  # percent of the cycle each tool owns
     seg_w = (W - 2 * PAD - GAP * (len(LAYERS) - 1)) / len(LAYERS)
-    band_y, band_h = 58, 12
+
+    tallest = 40 if activity else 12
+    bar_bottom = 58 + tallest  # bars grow up from here
+    label_y = bar_bottom + 26
+    height = H + (tallest - 12)
+
+    bars = []  # (x, y, h) per layer
+    for i, (name, _, _) in enumerate(LAYERS):
+        x = PAD + i * (seg_w + GAP)
+        h = bar_height(shares.get(name, 0), top, tallest) if activity else tallest
+        bars.append((x, bar_bottom - h, h))
 
     out = [
-        f'<svg xmlns="http://www.w3.org/2000/svg" width="{W}" height="{H}" viewBox="0 0 {W} {H}" '
+        f'<svg xmlns="http://www.w3.org/2000/svg" width="{W}" height="{height}" viewBox="0 0 {W} {height}" '
         'role="img" aria-labelledby="title desc">',
         "<title id=\"title\">The full spectrum</title>",
         "<desc id=\"desc\">"
+        + (
+            "Share of my last 90 days of commits: "
+            + "; ".join(f"{name} {shares.get(name, 0):.0f}%" for name, _, _ in LAYERS)
+            + ". "
+            if activity
+            else ""
+        )
         + "; ".join(f"{name}: {', '.join(tools)}" for name, _, tools in LAYERS)
         + "</desc>",
         "<style>",
@@ -111,34 +139,35 @@ def build(activity: dict | None = None) -> str:
         "  </linearGradient>",
         '  <clipPath id="band">',
     ]
-    for i in range(len(LAYERS)):
-        x = PAD + i * (seg_w + GAP)
-        out.append(f'    <rect x="{x:.2f}" y="{band_y}" width="{seg_w:.2f}" height="{band_h}" rx="3"/>')
+    for x, y, h in bars:
+        out.append(f'    <rect x="{x:.2f}" y="{y:.2f}" width="{seg_w:.2f}" height="{h:.2f}" rx="3"/>')
     out += [
         "  </clipPath>",
         "</defs>",
-        f'<rect x="0.5" y="0.5" width="{W - 1}" height="{H - 1}" rx="4.5" fill="{BG}" stroke="{BORDER}"/>',
+        f'<rect x="0.5" y="0.5" width="{W - 1}" height="{height - 1}" rx="4.5" fill="{BG}" stroke="{BORDER}"/>',
         f'<text x="{PAD}" y="38" fill="{CREAM}" font-family="{SANS}" font-size="12" font-weight="600" '
         'letter-spacing="2.4">THE FULL SPECTRUM</text>',
         f'<text x="{W - PAD}" y="38" text-anchor="end" fill="{MUTED}" font-family="{SANS}" font-size="12" '
         'font-style="italic">infrastructure · interface · intelligence</text>',
     ]
 
-    for i, (name, color, tools) in enumerate(LAYERS):
-        x = PAD + i * (seg_w + GAP)
-        opacity = brightness(shares.get(name, 0), top) if activity else 1.0
-        if name == busiest:
-            # a soft glow under the busiest layer that breathes in and out
+    for i, ((name, color, tools), (x, y, h)) in enumerate(zip(LAYERS, bars)):
+        if activity:
+            # faint full-height track, so the empty space above each bar reads as "less"
             out.append(
-                f'<rect class="busiest" x="{x - 3:.2f}" y="{band_y - 3}" width="{seg_w + 6:.2f}" '
-                f'height="{band_h + 6}" rx="6" fill="{color}" opacity="0.45"/>'
+                f'<rect x="{x:.2f}" y="{bar_bottom - tallest}" width="{seg_w:.2f}" height="{tallest}" rx="3" '
+                f'fill="{lift(color)}" fill-opacity="0.13"/>'
             )
+        if name == busiest:
+            # a soft glow around the busiest layer that breathes in and out
+            out.append(
+                f'<rect class="busiest" x="{x - 3:.2f}" y="{y - 3:.2f}" width="{seg_w + 6:.2f}" '
+                f'height="{h + 6:.2f}" rx="6" fill="{color}" opacity="0.45"/>'
+            )
+        bar_color = lift(color) if activity else color
+        out.append(f'<rect x="{x:.2f}" y="{y:.2f}" width="{seg_w:.2f}" height="{h:.2f}" rx="3" fill="{bar_color}"/>')
         out.append(
-            f'<rect x="{x:.2f}" y="{band_y}" width="{seg_w:.2f}" height="{band_h}" rx="3" fill="{color}" '
-            f'fill-opacity="{opacity:.2f}"/>'
-        )
-        out.append(
-            f'<text x="{x:.2f}" y="{band_y + 38}" fill="{CREAM}" font-family="{SANS}" font-size="12" '
+            f'<text x="{x:.2f}" y="{label_y}" fill="{CREAM}" font-family="{SANS}" font-size="12" '
             f'font-weight="600">{name}</text>'
         )
         for j, tool in enumerate(tools):
@@ -146,21 +175,21 @@ def build(activity: dict | None = None) -> str:
             delay = j * SLOT + i * STAGGER - cycle
             cls = "tool first" if j == 0 else "tool"
             out.append(
-                f'<text class="{cls}" style="animation-delay:{delay:.2f}s" x="{x:.2f}" y="{band_y + 62}" '
+                f'<text class="{cls}" style="animation-delay:{delay:.2f}s" x="{x:.2f}" y="{label_y + 24}" '
                 f'fill="{tint(color)}" font-family="{MONO}" font-size="12">{tool}</text>'
             )
 
     out += [
-        f'<g clip-path="url(#band)"><rect class="sheen" x="0" y="{band_y}" width="140" height="{band_h}" '
-        'fill="url(#shine)"/></g>',
-        f'<text x="{PAD}" y="{H - 20}" fill="{MUTED}" font-family="{SANS}" font-size="11">'
+        f'<g clip-path="url(#band)"><rect class="sheen" x="0" y="{bar_bottom - tallest}" width="140" '
+        f'height="{tallest}" fill="url(#shine)"/></g>',
+        f'<text x="{PAD}" y="{height - 20}" fill="{MUTED}" font-family="{SANS}" font-size="11">'
         + (
-            f"19 years across the stack · brightness shows my last {activity['window_days']} days of commits"
+            f"19 years across the stack · bar height is my last {activity['window_days']} days of commits"
             if activity
             else "19 years across the stack, one layer at a time"
         )
         + "</text>",
-        f'<text x="{W - PAD}" y="{H - 20}" text-anchor="end" fill="{MUTED}" font-family="{SANS}" '
+        f'<text x="{W - PAD}" y="{height - 20}" text-anchor="end" fill="{MUTED}" font-family="{SANS}" '
         'font-size="11">fullspecstudio.com</text>',
         "</svg>",
     ]
@@ -177,4 +206,4 @@ if __name__ == "__main__":
     print(f"wrote {args.out}")
     if activity:
         for name, pct in activity["percent"].items():
-            print(f"  {name:<16} {pct:5.1f}%  opacity {brightness(pct, max(activity['percent'].values())):.2f}")
+            print(f"  {name:<16} {pct:5.1f}%  bar {bar_height(pct, max(activity['percent'].values()), 40):4.1f}px")

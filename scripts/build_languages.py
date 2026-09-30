@@ -147,14 +147,23 @@ CODE_EXT = {
 FRONTEND_EXT = {".tsx", ".jsx", ".vue", ".svelte", ".astro", ".css", ".scss", ".html", ".swift", ".dart"}
 BACKEND_EXT = {".go", ".py", ".rb", ".ex", ".exs", ".rs", ".java", ".scala", ".php", ".cs", ".ts", ".mts", ".js", ".mjs", ".cjs"}
 
+# Checked in order, so specs and AI tooling win over the folder-based rules below them.
 LAYER_RULES = [
+    # specs, plans, and design docs, including the ones written with Claude Code or Codex
     ("Systems Design", re.compile(
-        r"(^|/)(adrs?|rfcs?|architecture|design)/.*\.mdx?$|(openapi|swagger|asyncapi)[^/]*\.(ya?ml|json)$"
-        r"|\.proto$|\.(graphql|gql)$"
+        r"(^|/)(docs/superpowers|\.superpowers|\.planning|specs?|plans?|adrs?|rfcs?|architecture|design)/.*\.mdx?$"
+        r"|(^|/)(spec|plan|design|architecture)\.mdx?$|(openapi|swagger|asyncapi)[^/]*\.(ya?ml|json)$"
+        r"|\.proto$|\.(graphql|gql)$",
+        re.IGNORECASE,
+    )),
+    # agent instructions, skills, prompts, evals, and MCP config
+    ("AI", re.compile(
+        r"(^|/)(prompts?|evals?|agents?|llm|rag|embeddings?|mcp|skills)/|\.prompt$"
+        r"|(^|/)(CLAUDE|AGENTS|GEMINI|SKILL)\.md$|(^|/)\.(claude|codex|cursor)/|(^|/)\.?mcp\.json$"
     )),
     ("DevOps", re.compile(
         r"(^|/)\.github/workflows/|(^|/)\.gitlab-ci|(^|/)\.circleci/|(^|/)(Jenkinsfile|Makefile|Taskfile\.ya?ml)$"
-        r"|(^|/)\.goreleaser|(^|/)(prometheus|grafana|alertmanager|loki)/|\.(sh|bash|zsh)$"
+        r"|(^|/)\.goreleaser|(^|/)(prometheus|grafana|alertmanager|loki|runbooks?)/|\.(sh|bash|zsh)$"
     )),
     ("Infra", re.compile(
         r"\.(tf|tfvars|hcl|nomad)$|(^|/)Dockerfile[^/]*$|(^|/)docker-compose[^/]*$|(^|/)(fly\.toml|vercel\.json|serverless\.ya?ml)$"
@@ -163,11 +172,15 @@ LAYER_RULES = [
     ("Data", re.compile(
         r"\.(sql|ipynb|prisma)$|(^|/)(migrations?|alembic|dbt|seeds?|dags|etl|pipelines?)/"
     )),
-    ("AI", re.compile(r"(^|/)(prompts?|evals?|agents?|llm|rag|embeddings?|mcp)/|\.prompt$")),
 ]
 
+# A repo is an AI project if a dependency manifest names an AI SDK, or if enough of my
+# recent commits touch AI SDK code; its backend code then counts toward the AI layer.
+AI_MANIFESTS = ["package.json", "pyproject.toml", "requirements*.txt", "go.mod", "Gemfile", "composer.json", "Cargo.toml"]
+AI_REPO_MIN_COMMITS = 3
 
-def layer_for(path: str, ai_commit: bool) -> str | None:
+
+def layer_for(path: str, ai_commit: bool, ai_repo: bool = False) -> str | None:
     """Which layer of the spectrum a changed file belongs to, if any."""
     if SKIP_PATH.search(path):
         return None
@@ -183,7 +196,7 @@ def layer_for(path: str, ai_commit: bool) -> str | None:
     if ext in {".ts", ".js", ".mjs"} and re.search(r"(^|/)(components|pages|app|ui|frontend|web|client|views|hooks|routes)/", path):
         return "Frontend"
     if ext in BACKEND_EXT:
-        return "Backend"
+        return "AI" if ai_repo else "Backend"
     return None
 
 
@@ -211,6 +224,12 @@ def analyze(repo: str, workdir: Path) -> tuple[str, list, list, str | None]:
             "git", "log", "HEAD", "--no-merges", since, "-E", f"-G{AI_PATTERN}", "--format=%H", *author_args,
             cwd=dest, timeout=CLONE_TIMEOUT,
         ).split())
+        # `git grep` exits 1 when nothing matches, so this one doesn't use run()'s check
+        manifest_hit = subprocess.run(
+            ["git", "grep", "-q", "-i", "-E", AI_PATTERN, "HEAD", "--", *AI_MANIFESTS],
+            cwd=dest, capture_output=True, timeout=CLONE_TIMEOUT,
+        ).returncode == 0
+        ai_repo = manifest_hit or len(ai_commits) >= AI_REPO_MIN_COMMITS
     except (subprocess.CalledProcessError, subprocess.TimeoutExpired) as e:
         return repo, [], [], (getattr(e, "stderr", "") or str(e)).strip().splitlines()[-1][:200]
     finally:
@@ -245,7 +264,7 @@ def analyze(repo: str, workdir: Path) -> tuple[str, list, list, str | None]:
         if lang:
             langs.append((commit, lang[0], added))
         if recent:
-            layer = layer_for(path, commit in ai_commits)
+            layer = layer_for(path, commit in ai_commits, ai_repo)
             if layer:
                 layers.append((commit, layer, added))
     flush()
