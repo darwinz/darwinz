@@ -1,0 +1,115 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="840" height="200" viewBox="0 0 840 200" role="img" aria-labelledby="title desc">
+<title id="title">The full spectrum</title>
+<desc id="desc">Share of my last 90 days of commits: Systems Design 14%; Infra 2%; DevOps 2%; Data 8%; AI 32%; Backend 19%; Frontend 23%. Systems Design: Distributed, Event-driven, API design, OpenAPI, gRPC, Protobuf; Infra: AWS, GCP, Terraform, Kubernetes, Docker, Vault; DevOps: GitHub Actions, Prometheus, Loki, Traefik, Packer, Linux; Data: Kafka, PostgreSQL, MySQL, Redis, Elasticsearch, Spark; AI: Claude, Bedrock, Agents, RAG, Evals, MCP; Backend: Go, Python, Node.js, Elixir, Ruby, Rust; Frontend: TypeScript, React, Vue, Swift, Dart, Next.js</desc>
+<style>
+  .tool { opacity: 0; animation: cycle 21s linear infinite; }
+  @keyframes cycle {
+    0% { opacity: 0; transform: translateY(5px); }
+    3.00% { opacity: 1; transform: translateY(0); }
+    13.67% { opacity: 1; transform: translateY(0); }
+    16.67% { opacity: 0; transform: translateY(-5px); }
+    100% { opacity: 0; }
+  }
+  .sheen { animation: sweep 9s ease-in-out infinite; }
+  @keyframes sweep {
+    0% { transform: translateX(-160px); }
+    55% { transform: translateX(880px); }
+    100% { transform: translateX(880px); }
+  }
+  .busiest { animation: pulse 3.2s ease-in-out infinite; }
+  @keyframes pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.35; }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .tool, .sheen, .busiest { animation: none; }
+    .tool.first { opacity: 1; }
+  }
+</style>
+<defs>
+  <linearGradient id="shine" x1="0" x2="1" y1="0" y2="0">
+    <stop offset="0" stop-color="#fff" stop-opacity="0"/>
+    <stop offset="0.5" stop-color="#fff" stop-opacity="0.55"/>
+    <stop offset="1" stop-color="#fff" stop-opacity="0"/>
+  </linearGradient>
+  <clipPath id="band">
+    <rect x="24.00" y="78.66" width="109.71" height="19.34" rx="3"/>
+    <rect x="137.71" y="92.33" width="109.71" height="5.67" rx="3"/>
+    <rect x="251.43" y="92.39" width="109.71" height="5.61" rx="3"/>
+    <rect x="365.14" y="85.60" width="109.71" height="12.40" rx="3"/>
+    <rect x="478.86" y="58.00" width="109.71" height="40.00" rx="3"/>
+    <rect x="592.57" y="73.18" width="109.71" height="24.82" rx="3"/>
+    <rect x="706.29" y="68.78" width="109.71" height="29.22" rx="3"/>
+  </clipPath>
+</defs>
+<rect x="0.5" y="0.5" width="839" height="199" rx="4.5" fill="#1a1b27" stroke="#e4e2e2"/>
+<text x="24" y="38" fill="#f5ecd9" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" font-weight="600" letter-spacing="2.4">THE FULL SPECTRUM</text>
+<text x="816" y="38" text-anchor="end" fill="#9aa0b8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" font-style="italic">infrastructure · interface · intelligence</text>
+<rect x="24.00" y="58" width="109.71" height="40" rx="3" fill="#6a6f9e" fill-opacity="0.13"/>
+<rect x="24.00" y="78.66" width="109.71" height="19.34" rx="3" fill="#6a6f9e"/>
+<text x="24.00" y="124" fill="#f5ecd9" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" font-weight="600">Systems Design</text>
+<text class="tool first" style="animation-delay:-21.00s" x="24.00" y="148" fill="#b5b3be" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="12">Distributed</text>
+<text class="tool" style="animation-delay:-17.50s" x="24.00" y="148" fill="#b5b3be" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="12">Event-driven</text>
+<text class="tool" style="animation-delay:-14.00s" x="24.00" y="148" fill="#b5b3be" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="12">API design</text>
+<text class="tool" style="animation-delay:-10.50s" x="24.00" y="148" fill="#b5b3be" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="12">OpenAPI</text>
+<text class="tool" style="animation-delay:-7.00s" x="24.00" y="148" fill="#b5b3be" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="12">gRPC</text>
+<text class="tool" style="animation-delay:-3.50s" x="24.00" y="148" fill="#b5b3be" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="12">Protobuf</text>
+<rect x="137.71" y="58" width="109.71" height="40" rx="3" fill="#1f6a66" fill-opacity="0.13"/>
+<rect x="137.71" y="92.33" width="109.71" height="5.67" rx="3" fill="#1f6a66"/>
+<text x="137.71" y="124" fill="#f5ecd9" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" font-weight="600">Infra</text>
+<text class="tool first" style="animation-delay:-20.60s" x="137.71" y="148" fill="#b1c2b4" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="12">AWS</text>
+<text class="tool" style="animation-delay:-17.10s" x="137.71" y="148" fill="#b1c2b4" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="12">GCP</text>
+<text class="tool" style="animation-delay:-13.60s" x="137.71" y="148" fill="#b1c2b4" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="12">Terraform</text>
+<text class="tool" style="animation-delay:-10.10s" x="137.71" y="148" fill="#b1c2b4" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="12">Kubernetes</text>
+<text class="tool" style="animation-delay:-6.60s" x="137.71" y="148" fill="#b1c2b4" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="12">Docker</text>
+<text class="tool" style="animation-delay:-3.10s" x="137.71" y="148" fill="#b1c2b4" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="12">Vault</text>
+<rect x="251.43" y="58" width="109.71" height="40" rx="3" fill="#5f7a28" fill-opacity="0.13"/>
+<rect x="251.43" y="92.39" width="109.71" height="5.61" rx="3" fill="#5f7a28"/>
+<text x="251.43" y="124" fill="#f5ecd9" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" font-weight="600">DevOps</text>
+<text class="tool first" style="animation-delay:-20.20s" x="251.43" y="148" fill="#c5c8a0" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="12">GitHub Actions</text>
+<text class="tool" style="animation-delay:-16.70s" x="251.43" y="148" fill="#c5c8a0" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="12">Prometheus</text>
+<text class="tool" style="animation-delay:-13.20s" x="251.43" y="148" fill="#c5c8a0" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="12">Loki</text>
+<text class="tool" style="animation-delay:-9.70s" x="251.43" y="148" fill="#c5c8a0" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="12">Traefik</text>
+<text class="tool" style="animation-delay:-6.20s" x="251.43" y="148" fill="#c5c8a0" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="12">Packer</text>
+<text class="tool" style="animation-delay:-2.70s" x="251.43" y="148" fill="#c5c8a0" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="12">Linux</text>
+<rect x="365.14" y="58" width="109.71" height="40" rx="3" fill="#b3801f" fill-opacity="0.13"/>
+<rect x="365.14" y="85.60" width="109.71" height="12.40" rx="3" fill="#b3801f"/>
+<text x="365.14" y="124" fill="#f5ecd9" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" font-weight="600">Data</text>
+<text class="tool first" style="animation-delay:-19.80s" x="365.14" y="148" fill="#e0c99d" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="12">Kafka</text>
+<text class="tool" style="animation-delay:-16.30s" x="365.14" y="148" fill="#e0c99d" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="12">PostgreSQL</text>
+<text class="tool" style="animation-delay:-12.80s" x="365.14" y="148" fill="#e0c99d" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="12">MySQL</text>
+<text class="tool" style="animation-delay:-9.30s" x="365.14" y="148" fill="#e0c99d" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="12">Redis</text>
+<text class="tool" style="animation-delay:-5.80s" x="365.14" y="148" fill="#e0c99d" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="12">Elasticsearch</text>
+<text class="tool" style="animation-delay:-2.30s" x="365.14" y="148" fill="#e0c99d" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="12">Spark</text>
+<rect x="478.86" y="58" width="109.71" height="40" rx="3" fill="#b25a3e" fill-opacity="0.13"/>
+<rect class="busiest" x="475.86" y="55.00" width="115.71" height="46.00" rx="6" fill="#b25a3e" opacity="0.45"/>
+<rect x="478.86" y="58.00" width="109.71" height="40.00" rx="3" fill="#b25a3e"/>
+<text x="478.86" y="124" fill="#f5ecd9" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" font-weight="600">AI</text>
+<text class="tool first" style="animation-delay:-19.40s" x="478.86" y="148" fill="#e0bda7" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="12">Claude</text>
+<text class="tool" style="animation-delay:-15.90s" x="478.86" y="148" fill="#e0bda7" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="12">Bedrock</text>
+<text class="tool" style="animation-delay:-12.40s" x="478.86" y="148" fill="#e0bda7" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="12">Agents</text>
+<text class="tool" style="animation-delay:-8.90s" x="478.86" y="148" fill="#e0bda7" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="12">RAG</text>
+<text class="tool" style="animation-delay:-5.40s" x="478.86" y="148" fill="#e0bda7" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="12">Evals</text>
+<text class="tool" style="animation-delay:-1.90s" x="478.86" y="148" fill="#e0bda7" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="12">MCP</text>
+<rect x="592.57" y="58" width="109.71" height="40" rx="3" fill="#7e402c" fill-opacity="0.13"/>
+<rect x="592.57" y="73.18" width="109.71" height="24.82" rx="3" fill="#7e402c"/>
+<text x="592.57" y="124" fill="#f5ecd9" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" font-weight="600">Backend</text>
+<text class="tool first" style="animation-delay:-19.00s" x="592.57" y="148" fill="#cfb5a2" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="12">Go</text>
+<text class="tool" style="animation-delay:-15.50s" x="592.57" y="148" fill="#cfb5a2" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="12">Python</text>
+<text class="tool" style="animation-delay:-12.00s" x="592.57" y="148" fill="#cfb5a2" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="12">Node.js</text>
+<text class="tool" style="animation-delay:-8.50s" x="592.57" y="148" fill="#cfb5a2" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="12">Elixir</text>
+<text class="tool" style="animation-delay:-5.00s" x="592.57" y="148" fill="#cfb5a2" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="12">Ruby</text>
+<text class="tool" style="animation-delay:-1.50s" x="592.57" y="148" fill="#cfb5a2" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="12">Rust</text>
+<rect x="706.29" y="58" width="109.71" height="40" rx="3" fill="#7d5b63" fill-opacity="0.13"/>
+<rect x="706.29" y="68.78" width="109.71" height="29.22" rx="3" fill="#7d5b63"/>
+<text x="706.29" y="124" fill="#f5ecd9" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" font-weight="600">Frontend</text>
+<text class="tool first" style="animation-delay:-18.60s" x="706.29" y="148" fill="#beaaa3" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="12">TypeScript</text>
+<text class="tool" style="animation-delay:-15.10s" x="706.29" y="148" fill="#beaaa3" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="12">React</text>
+<text class="tool" style="animation-delay:-11.60s" x="706.29" y="148" fill="#beaaa3" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="12">Vue</text>
+<text class="tool" style="animation-delay:-8.10s" x="706.29" y="148" fill="#beaaa3" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="12">Swift</text>
+<text class="tool" style="animation-delay:-4.60s" x="706.29" y="148" fill="#beaaa3" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="12">Dart</text>
+<text class="tool" style="animation-delay:-1.10s" x="706.29" y="148" fill="#beaaa3" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="12">Next.js</text>
+<g clip-path="url(#band)"><rect class="sheen" x="0" y="58" width="140" height="40" fill="url(#shine)"/></g>
+<text x="24" y="180" fill="#9aa0b8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="11">19 years across the stack · bar height is my last 90 days of commits</text>
+<text x="816" y="180" text-anchor="end" fill="#9aa0b8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="11">updated 2026-10-03 · fullspecstudio.com</text>
+</svg>
