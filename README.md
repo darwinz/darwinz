@@ -66,22 +66,6 @@ I also contribute to open source and join hackathons, and I maintain (and am the
 
 ---
 
-## Open source I've helped build
-
-<p align="center">
-  <a href="https://github.com/TheAlgorithms/PHP"><img width="45%" src="https://raw.githubusercontent.com/darwinz/darwinz/output/pin-PHP.svg" alt="TheAlgorithms/PHP" /></a>
-  &nbsp;&nbsp;&nbsp;
-  <a href="https://github.com/moov-io/ach"><img width="45%" src="https://raw.githubusercontent.com/darwinz/darwinz/output/pin-ach.svg" alt="moov-io/ach" /></a>
-</p>
-
-<p align="center">
-  <a href="https://github.com/moovfinancial/moov-go"><img width="45%" src="https://raw.githubusercontent.com/darwinz/darwinz/output/pin-moov-go.svg" alt="moovfinancial/moov-go" /></a>
-  &nbsp;&nbsp;&nbsp;
-  <a href="https://github.com/Fullspec-Studio/aeo-engine"><img width="45%" src="https://raw.githubusercontent.com/darwinz/darwinz/output/pin-aeo-engine.svg" alt="Fullspec-Studio/aeo-engine" /></a>
-</p>
-
----
-
 ## A little more about me
 
 <p> Some fun facts </p>
