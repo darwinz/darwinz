@@ -66,9 +66,10 @@ def bar_height(share: float, top: float, tallest: float) -> float:
     return MIN_BAR + (tallest - MIN_BAR) * share / top if top else tallest
 
 
-def build(activity: dict | None = None, updated: str | None = None) -> str:
+def build(activity: dict | None = None, updated: str | None = None, repos: int | None = None) -> str:
     """activity: the "layers" object from languages.json, or None for the static band.
     updated: the scan date from languages.json, shown in the footer like the languages chart.
+    repos: how many repos have my commits, all-time, also from languages.json.
 
     With activity, the band becomes the Fullspec mark: bottom-aligned bars whose heights
     show each layer's share of recent commits, over faint full-height tracks.
@@ -185,7 +186,8 @@ def build(activity: dict | None = None, updated: str | None = None) -> str:
         f'height="{tallest}" fill="url(#shine)"/></g>',
         f'<text x="{PAD}" y="{height - 20}" fill="{MUTED}" font-family="{SANS}" font-size="11">'
         + (
-            f"19 years across the stack · bar height is my last {activity['window_days']} days of commits"
+            f"19 years across the stack · commits in {repos} repos"
+            f" · bar height is my last {activity['window_days']} days of commits"
             if activity
             else "19 years across the stack, one layer at a time"
         )
@@ -204,7 +206,7 @@ if __name__ == "__main__":
     args = ap.parse_args()
     data = json.loads(Path(args.data).read_text()) if args.data else {}
     activity = data.get("layers")
-    Path(args.out).write_text(build(activity, data.get("updated")))
+    Path(args.out).write_text(build(activity, data.get("updated"), data.get("repos_with_commits")))
     print(f"wrote {args.out}")
     if activity:
         for name, pct in activity["percent"].items():
