@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="840" height="306" viewBox="0 0 840 306" role="img" aria-labelledby="title desc">
+<title id="title">Languages I've written</title>
+<desc id="desc">Go 18.7%; Python 13.6%; TypeScript 13.3%; PHP 12.5%; JavaScript 11.0%; Shell 8.0%; HCL 6.2%; Dart 4.3%; Swift 3.7%; Ruby 2.1%; Java 1.9%; SQL 1.3%</desc>
+<rect x="0.5" y="0.5" width="839" height="305" rx="4.5" fill="#1a1b27" stroke="#e4e2e2"/>
+<text x="24" y="38" fill="#f5ecd9" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" font-weight="600" letter-spacing="2.4">LANGUAGES I'VE WRITTEN</text>
+<text x="816" y="38" text-anchor="end" fill="#9aa0b8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" font-style="italic">weighted by commits and lines · every repo, all time</text>
+<clipPath id="band"><rect x="24" y="58" width="792" height="12" rx="3"/></clipPath>
+<g clip-path="url(#band)">
+<rect x="24.00" y="58" width="141.49" height="12" fill="#00ADD8"/>
+<rect x="168.49" y="58" width="102.48" height="12" fill="#3572A5"/>
+<rect x="273.97" y="58" width="100.81" height="12" fill="#3178c6"/>
+<rect x="377.78" y="58" width="94.52" height="12" fill="#4F5D95"/>
+<rect x="475.30" y="58" width="83.32" height="12" fill="#f1e05a"/>
+<rect x="561.62" y="58" width="60.37" height="12" fill="#89e051"/>
+<rect x="624.99" y="58" width="46.72" height="12" fill="#844FBA"/>
+<rect x="674.71" y="58" width="32.58" height="12" fill="#00B4AB"/>
+<rect x="710.29" y="58" width="28.09" height="12" fill="#F05138"/>
+<rect x="741.38" y="58" width="15.90" height="12" fill="#b07e7f"/>
+<rect x="760.27" y="58" width="14.40" height="12" fill="#b07219"/>
+<rect x="777.67" y="58" width="9.61" height="12" fill="#e38c00"/>
+<rect x="790.28" y="58" width="25.72" height="12" fill="#4b5063"/>
+</g>
+<circle cx="29.0" cy="96" r="5" fill="#00ADD8"/>
+<text x="40.0" y="100" fill="#f5ecd9" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13" font-weight="600">Go</text>
+<text x="40.0" y="118" fill="#9aa0b8" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="11">18.7% · 1,065 commits</text>
+<circle cx="227.0" cy="96" r="5" fill="#3572A5"/>
+<text x="238.0" y="100" fill="#f5ecd9" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13" font-weight="600">Python</text>
+<text x="238.0" y="118" fill="#9aa0b8" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="11">13.6% · 815 commits</text>
+<circle cx="425.0" cy="96" r="5" fill="#3178c6"/>
+<text x="436.0" y="100" fill="#f5ecd9" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13" font-weight="600">TypeScript</text>
+<text x="436.0" y="118" fill="#9aa0b8" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="11">13.3% · 703 commits</text>
+<circle cx="623.0" cy="96" r="5" fill="#4F5D95"/>
+<text x="634.0" y="100" fill="#f5ecd9" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13" font-weight="600">PHP</text>
+<text x="634.0" y="118" fill="#9aa0b8" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="11">12.5% · 724 commits</text>
+<circle cx="29.0" cy="140" r="5" fill="#f1e05a"/>
+<text x="40.0" y="144" fill="#f5ecd9" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13" font-weight="600">JavaScript</text>
+<text x="40.0" y="162" fill="#9aa0b8" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="11">11.0% · 881 commits</text>
+<circle cx="227.0" cy="140" r="5" fill="#89e051"/>
+<text x="238.0" y="144" fill="#f5ecd9" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13" font-weight="600">Shell</text>
+<text x="238.0" y="162" fill="#9aa0b8" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="11">8.0% · 766 commits</text>
+<circle cx="425.0" cy="140" r="5" fill="#844FBA"/>
+<text x="436.0" y="144" fill="#f5ecd9" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13" font-weight="600">HCL</text>
+<text x="436.0" y="162" fill="#9aa0b8" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="11">6.2% · 656 commits</text>
+<circle cx="623.0" cy="140" r="5" fill="#00B4AB"/>
+<text x="634.0" y="144" fill="#f5ecd9" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13" font-weight="600">Dart</text>
+<text x="634.0" y="162" fill="#9aa0b8" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="11">4.3% · 222 commits</text>
+<circle cx="29.0" cy="184" r="5" fill="#F05138"/>
+<text x="40.0" y="188" fill="#f5ecd9" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13" font-weight="600">Swift</text>
+<text x="40.0" y="206" fill="#9aa0b8" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="11">3.7% · 210 commits</text>
+<circle cx="227.0" cy="184" r="5" fill="#b07e7f"/>
+<text x="238.0" y="188" fill="#f5ecd9" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13" font-weight="600">Ruby</text>
+<text x="238.0" y="206" fill="#9aa0b8" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="11">2.1% · 194 commits</text>
+<circle cx="425.0" cy="184" r="5" fill="#b07219"/>
+<text x="436.0" y="188" fill="#f5ecd9" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13" font-weight="600">Java</text>
+<text x="436.0" y="206" fill="#9aa0b8" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="11">1.9% · 121 commits</text>
+<circle cx="623.0" cy="184" r="5" fill="#e38c00"/>
+<text x="634.0" y="188" fill="#f5ecd9" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13" font-weight="600">SQL</text>
+<text x="634.0" y="206" fill="#9aa0b8" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="11">1.3% · 196 commits</text>
+<text x="24" y="232" fill="#9aa0b8" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="11">Also: Rust · Vim Script · Elixir · Astro · Protocol Buffer · C# · Lua · Vue · Objective-C · C++ · C · GraphQL</text>
+<text x="24" y="248" fill="#9aa0b8" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="11">Kotlin · Scala</text>
+<text x="24" y="286" fill="#9aa0b8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="11">6,270 commits across 229 repos</text>
+<text x="816" y="286" text-anchor="end" fill="#9aa0b8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="11">updated 2026-10-10</text>
+</svg>
