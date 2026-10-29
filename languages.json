@@ -1,0 +1,240 @@
+{
+  "updated": "2026-10-29",
+  "repos_analyzed": 413,
+  "repos_with_commits": 232,
+  "commits": 6671,
+  "total_lines": 993510,
+  "languages": [
+    {
+      "name": "Go",
+      "percent": 17.364751979465822,
+      "lines": 186040,
+      "commits": 1071,
+      "percent_by_lines": 18.725528681140602,
+      "percent_by_commits": 15.804998025851654
+    },
+    {
+      "name": "Python",
+      "percent": 14.668237349618513,
+      "lines": 140062,
+      "commits": 929,
+      "percent_by_lines": 14.097694034282494,
+      "percent_by_commits": 13.476473891461705
+    },
+    {
+      "name": "TypeScript",
+      "percent": 14.251080561669417,
+      "lines": 171810,
+      "commits": 808,
+      "percent_by_lines": 17.293233082706767,
+      "percent_by_commits": 11.520683535727827
+    },
+    {
+      "name": "PHP",
+      "percent": 12.62484201425889,
+      "lines": 129794,
+      "commits": 790,
+      "percent_by_lines": 13.064186570844782,
+      "percent_by_commits": 10.95193440379116
+    },
+    {
+      "name": "JavaScript",
+      "percent": 10.377031182820499,
+      "lines": 112034,
+      "commits": 904,
+      "percent_by_lines": 11.276585036889413,
+      "percent_by_commits": 11.445412300400546
+    },
+    {
+      "name": "Shell",
+      "percent": 7.420488133751957,
+      "lines": 47833,
+      "commits": 776,
+      "percent_by_lines": 4.814546406176083,
+      "percent_by_commits": 10.098011774039739
+    },
+    {
+      "name": "Dart",
+      "percent": 5.844237205815074,
+      "lines": 67493,
+      "commits": 321,
+      "percent_by_lines": 6.79338909522803,
+      "percent_by_commits": 4.590551373403381
+    },
+    {
+      "name": "HCL",
+      "percent": 5.697539643673171,
+      "lines": 21081,
+      "commits": 656,
+      "percent_by_lines": 2.121870942416282,
+      "percent_by_commits": 9.822857919736073
+    },
+    {
+      "name": "Swift",
+      "percent": 3.4746571567348417,
+      "lines": 24695,
+      "commits": 216,
+      "percent_by_lines": 2.4856317500578755,
+      "percent_by_commits": 3.078617964532396
+    },
+    {
+      "name": "Ruby",
+      "percent": 1.9384164310553673,
+      "lines": 13867,
+      "commits": 194,
+      "percent_by_lines": 1.395758472486437,
+      "percent_by_commits": 2.868144522546253
+    },
+    {
+      "name": "Java",
+      "percent": 1.7553469882216604,
+      "lines": 10632,
+      "commits": 121,
+      "percent_by_lines": 1.0701452426246338,
+      "percent_by_commits": 1.7993028034082
+    },
+    {
+      "name": "SQL",
+      "percent": 1.3466948186005079,
+      "lines": 10747,
+      "commits": 213,
+      "percent_by_lines": 1.081720365169953,
+      "percent_by_commits": 1.2585041292132595
+    },
+    {
+      "name": "Rust",
+      "percent": 0.7272300591566389,
+      "lines": 15566,
+      "commits": 30,
+      "percent_by_lines": 1.5667683264385863,
+      "percent_by_commits": 0.44970769000149907
+    },
+    {
+      "name": "Astro",
+      "percent": 0.4832399606091682,
+      "lines": 2721,
+      "commits": 49,
+      "percent_by_lines": 0.27387746474620284,
+      "percent_by_commits": 0.557814835191933
+    },
+    {
+      "name": "Vim Script",
+      "percent": 0.47644761184396806,
+      "lines": 13691,
+      "commits": 42,
+      "percent_by_lines": 1.3780435023301225,
+      "percent_by_commits": 0.5634686715363576
+    },
+    {
+      "name": "Elixir",
+      "percent": 0.43870300122874767,
+      "lines": 4860,
+      "commits": 31,
+      "percent_by_lines": 0.4891747440891385,
+      "percent_by_commits": 0.3975707320780856
+    },
+    {
+      "name": "Protocol Buffer",
+      "percent": 0.3752268247439417,
+      "lines": 464,
+      "commits": 46,
+      "percent_by_lines": 0.04670310313937454,
+      "percent_by_commits": 0.6895517913356323
+    },
+    {
+      "name": "C#",
+      "percent": 0.30711295812345435,
+      "lines": 5718,
+      "commits": 19,
+      "percent_by_lines": 0.5755352236011716,
+      "percent_by_commits": 0.2774253885154046
+    },
+    {
+      "name": "Lua",
+      "percent": 0.16511418840471473,
+      "lines": 9526,
+      "commits": 9,
+      "percent_by_lines": 0.9588227597105213,
+      "percent_by_commits": 0.13491230700044893
+    },
+    {
+      "name": "Vue",
+      "percent": 0.10933213700954308,
+      "lines": 562,
+      "commits": 6,
+      "percent_by_lines": 0.056567120612776925,
+      "percent_by_commits": 0.0873591829176582
+    },
+    {
+      "name": "Objective-C",
+      "percent": 0.04550575673230221,
+      "lines": 2493,
+      "commits": 2,
+      "percent_by_lines": 0.25092852613461364,
+      "percent_by_commits": 0.02432332027660284
+    },
+    {
+      "name": "C++",
+      "percent": 0.03745231383034055,
+      "lines": 544,
+      "commits": 5,
+      "percent_by_lines": 0.05475536230133567,
+      "percent_by_commits": 0.032640343680791294
+    },
+    {
+      "name": "Kotlin",
+      "percent": 0.034664882279011426,
+      "lines": 296,
+      "commits": 8,
+      "percent_by_lines": 0.029793358899256172,
+      "percent_by_commits": 0.030989837848220222
+    },
+    {
+      "name": "C",
+      "percent": 0.017310046953187535,
+      "lines": 729,
+      "commits": 4,
+      "percent_by_lines": 0.07337621161337078,
+      "percent_by_commits": 0.009304577395750888
+    },
+    {
+      "name": "GraphQL",
+      "percent": 0.016365742161245592,
+      "lines": 251,
+      "commits": 5,
+      "percent_by_lines": 0.025263963120653037,
+      "percent_by_commits": 0.014448421776034403
+    },
+    {
+      "name": "Scala",
+      "percent": 0.0029710512380091295,
+      "lines": 1,
+      "commits": 1,
+      "percent_by_lines": 0.0001006532395245141,
+      "percent_by_commits": 0.014990256333383313
+    }
+  ],
+  "repos_failed": 0,
+  "layers": {
+    "window_days": 90,
+    "commits": 1903,
+    "percent": {
+      "Systems Design": 15.075521299174147,
+      "Infra": 2.288192319687971,
+      "DevOps": 1.9057993859690834,
+      "Data": 7.548075670155192,
+      "AI": 39.1595075013182,
+      "Backend": 12.246169187819792,
+      "Frontend": 21.776734635875616
+    },
+    "commits_by_layer": {
+      "Systems Design": 376,
+      "Infra": 105,
+      "DevOps": 102,
+      "Data": 165,
+      "AI": 766,
+      "Backend": 303,
+      "Frontend": 556
+    }
+  }
+}
