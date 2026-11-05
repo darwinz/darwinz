@@ -7,9 +7,10 @@ rotating list of tools underneath. Edit LAYERS and re-run:
     /usr/bin/python3 scripts/build_spectrum.py                  # static, to assets/spectrum.svg
     python3 scripts/build_spectrum.py --data dist/languages.json --out dist/spectrum.svg
 
-With --data (written by build_languages.py), each segment shows
-that layer's share of my commits over the last 90 days as a bar height, and
-the busiest layer pulses. The languages workflow does this daily.
+With --data (written by build_languages.py), each segment's bar height shows
+how much of my last 90 days of commits touched that layer, and the busiest
+layer pulses. A line can count toward two layers (backend code in an AI
+project is both), so the shares can add up to more than 100. The languages workflow does this daily.
 """
 
 from __future__ import annotations

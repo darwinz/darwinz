@@ -135,7 +135,7 @@ def language_for(path: str) -> tuple[str, str] | None:
 
 LAYER_WINDOW_DAYS = 90
 
-# Commits whose diffs mention these count their code toward the AI layer.
+# Commits whose diffs mention these count their code toward the AI layer, on top of its usual layer.
 AI_PATTERN = (
     r"anthropic|openai|bedrock|langchain|llama_?index|@ai-sdk|modelcontextprotocol|FastMCP"
     r"|embeddings?\(|chat\.completions|messages\.create"
@@ -175,29 +175,37 @@ LAYER_RULES = [
 ]
 
 # A repo is an AI project if a dependency manifest names an AI SDK, or if enough of my
-# recent commits touch AI SDK code; its backend code then counts toward the AI layer.
+# recent commits touch AI SDK code; its backend code then counts toward AI as well as Backend.
 AI_MANIFESTS = ["package.json", "pyproject.toml", "requirements*.txt", "go.mod", "Gemfile", "composer.json", "Cargo.toml"]
 AI_REPO_MIN_COMMITS = 3
 
 
-def layer_for(path: str, ai_commit: bool, ai_repo: bool = False) -> str | None:
-    """Which layer of the spectrum a changed file belongs to, if any."""
-    if SKIP_PATH.search(path):
-        return None
-    name = path.rsplit("/", 1)[-1]
-    ext = "." + name.rsplit(".", 1)[-1].lower() if "." in name else ""
+def base_layer(path: str, ext: str) -> str | None:
+    """The one layer a changed file belongs to on its own, before any AI credit."""
     for layer, rule in LAYER_RULES:
         if rule.search(path):
             return layer
-    if ai_commit and ext in CODE_EXT:
-        return "AI"
     if ext in FRONTEND_EXT:
         return "Frontend"
     if ext in {".ts", ".js", ".mjs"} and re.search(r"(^|/)(components|pages|app|ui|frontend|web|client|views|hooks|routes)/", path):
         return "Frontend"
     if ext in BACKEND_EXT:
-        return "AI" if ai_repo else "Backend"
+        return "Backend"
     return None
+
+
+def layers_for(path: str, ai_commit: bool, ai_repo: bool = False) -> frozenset[str]:
+    """Which layers of the spectrum a changed file counts toward: its own layer, plus AI
+    when it's code in a commit that touches an AI SDK, or backend code in an AI project."""
+    if SKIP_PATH.search(path):
+        return frozenset()
+    name = path.rsplit("/", 1)[-1]
+    ext = "." + name.rsplit(".", 1)[-1].lower() if "." in name else ""
+    base = base_layer(path, ext)
+    layers = {base} if base else set()
+    if (ai_commit and ext in CODE_EXT) or (ai_repo and base == "Backend"):
+        layers.add("AI")
+    return frozenset(layers)
 
 
 def renamed_target(path: str) -> str:
@@ -210,7 +218,7 @@ def renamed_target(path: str) -> str:
 
 
 def analyze(repo: str, workdir: Path) -> tuple[str, list, list, str | None]:
-    """Returns (repo, [(commit, language, lines)], [(commit, layer, lines)] for recent commits, error)."""
+    """Returns (repo, [(commit, language, lines)], [(commit, layers, lines)] for recent commits, error)."""
     dest = workdir / repo.replace("/", "__")
     since = f"--since={LAYER_WINDOW_DAYS} days ago"
     try:
@@ -264,9 +272,9 @@ def analyze(repo: str, workdir: Path) -> tuple[str, list, list, str | None]:
         if lang:
             langs.append((commit, lang[0], added))
         if recent:
-            layer = layer_for(path, commit in ai_commits, ai_repo)
-            if layer:
-                layers.append((commit, layer, added))
+            file_layers = layers_for(path, commit in ai_commits, ai_repo)
+            if file_layers:
+                layers.append((commit, file_layers, added))
     flush()
     return repo, rows, layer_rows, None
 
@@ -392,10 +400,24 @@ def score_commits(per_commit: dict[str, list[tuple[str, int]]]) -> tuple[Counter
 LAYERS = ["Systems Design", "Infra", "DevOps", "Data", "AI", "Backend", "Frontend"]
 
 
-def layer_stats(layer_commits: dict[str, list[tuple[str, int]]]) -> dict:
-    """Each layer's share of recent work, for the spectrum band's brightness."""
-    _, _, score, touched = score_commits(layer_commits)
-    total = sum(score.values()) or 1
+def layer_stats(layer_commits: dict[str, list[tuple[frozenset[str], int]]]) -> dict:
+    """Each layer's share of recent work, for the spectrum band's bar heights.
+
+    Commits are weighted like score_commits. A file can count toward more than one layer
+    (backend code in an AI project is both Backend and AI), and each of its layers gets
+    full credit for its lines, so a layer's percent is the share of recent work that
+    touched it and the percents can add up to more than 100.
+    """
+    score, touched, total = Counter(), Counter(), 0.0
+    for entries in layer_commits.values():
+        size = sum(added for _, added in entries)
+        weight = math.log2(1 + size)
+        total += weight
+        touched.update({layer for layers, _ in entries for layer in layers})
+        for layers, added in entries:
+            for layer in layers:
+                score[layer] += weight * added / size
+    total = total or 1
     return {
         "window_days": LAYER_WINDOW_DAYS,
         "commits": len(layer_commits),
@@ -425,7 +447,7 @@ def main() -> None:
         print("  too large: " + ", ".join(skipped))
 
     per_commit: dict[str, list[tuple[str, int]]] = {}
-    layer_commits: dict[str, list[tuple[str, int]]] = {}
+    layer_commits: dict[str, list[tuple[frozenset[str], int]]] = {}
     commit_repo: dict[str, str] = {}
     repo_totals: dict[str, Counter] = {}
     repos_with_commits, failures = set(), []
@@ -443,9 +465,9 @@ def main() -> None:
                     per_commit.setdefault(commit, []).append((lang, added))
                     repos_with_commits.add(repo)
                     repo_totals.setdefault(repo, Counter())[lang] += added
-            for commit, layer, added in layer_rows:
+            for commit, layers, added in layer_rows:
                 if commit_repo.setdefault(commit, repo) == repo:
-                    layer_commits.setdefault(commit, []).append((layer, added))
+                    layer_commits.setdefault(commit, []).append((layers, added))
 
     lines, commits, score, touched = score_commits(per_commit)
     total = sum(lines.values())
