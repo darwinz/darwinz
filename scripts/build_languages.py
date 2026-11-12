@@ -21,6 +21,7 @@ import json
 import math
 import re
 import subprocess
+import sys
 import tempfile
 from collections import Counter
 from concurrent.futures import ThreadPoolExecutor, as_completed
@@ -118,7 +119,11 @@ def run(*cmd: str, cwd: Path | None = None, timeout: int | None = None) -> str:
 def list_repos() -> list[dict]:
     repos = []
     for owner in OWNERS:
-        out = run("gh", "repo", "list", owner, "--source", "--limit", "1000", "--json", "nameWithOwner,diskUsage,isEmpty")
+        try:
+            out = run("gh", "repo", "list", owner, "--source", "--limit", "1000", "--json", "nameWithOwner,diskUsage,isEmpty")
+        except subprocess.CalledProcessError as e:
+            # gh's own message (usually a bad or expired METRICS_TOKEN); it never names a repo
+            sys.exit(f"listing {owner}'s repos failed: {e.stderr.strip()}")
         repos += [r for r in json.loads(out) if not r["isEmpty"]]
     return repos
 
