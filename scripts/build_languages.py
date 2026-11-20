@@ -86,6 +86,7 @@ LANGUAGES = {
     ".vue": ("Vue", "#41b883"),
     ".svelte": ("Svelte", "#ff3e00"),
     ".astro": ("Astro", "#ff5a03"),
+    ".liquid": ("Liquid", "#67b8de"),
     ".vim": ("Vim Script", "#199f4b"),
     ".proto": ("Protocol Buffer", "#6a9fb5"),
     ".graphql": ("GraphQL", "#e10098"),
@@ -149,7 +150,7 @@ CODE_EXT = {
     ".go", ".py", ".rb", ".ex", ".exs", ".rs", ".java", ".kt", ".scala", ".php", ".cs",
     ".ts", ".tsx", ".mts", ".js", ".jsx", ".mjs", ".cjs", ".swift", ".dart",
 }
-FRONTEND_EXT = {".tsx", ".jsx", ".vue", ".svelte", ".astro", ".css", ".scss", ".html", ".swift", ".dart"}
+FRONTEND_EXT = {".tsx", ".jsx", ".vue", ".svelte", ".astro", ".liquid", ".css", ".scss", ".html", ".swift", ".dart"}
 BACKEND_EXT = {".go", ".py", ".rb", ".ex", ".exs", ".rs", ".java", ".scala", ".php", ".cs", ".ts", ".mts", ".js", ".mjs", ".cjs"}
 
 # Checked in order, so specs and AI tooling win over the folder-based rules below them.
